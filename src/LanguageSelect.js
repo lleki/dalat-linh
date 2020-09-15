@@ -21,10 +21,10 @@ const LanguageSelect = (props) => {
   );
 
   return (
-    <select onChange={onLanguageSelect}>
+    <Button onChange={onLanguageSelect}>
       {renderOption("en")}
       {renderOption("fr")}
-    </select>
+    </Button>
   );
 };
 
