@@ -9,10 +9,6 @@ export const StyledBurger = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
-  background: transparent;
-  border: none;
   cursor: pointer;
   padding: 0;
   z-index: 10;
@@ -49,9 +45,14 @@ export const StyledBurger = styled.button`
 const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
+      <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="92" height="92" fill="#EFECE2"/>
+        <rect x="24" y="39" width="44" height="2" fill="#19150A"/>
+        <rect x="24" y="45" width="44" height="2" fill="#19150A"/>
+        <rect x="24" y="51" width="44" height="2" fill="#19150A"/>
+      </svg>
+
+
     </StyledBurger>
   );
 };

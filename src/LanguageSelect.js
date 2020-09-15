@@ -7,7 +7,7 @@ import styled from "styled-components";
 const StyledButton = styled.button`
   position: absolute;
   top: 5%;
-  right: 5rem;
+  right: 10rem;
   background: transparent;
   cursor: pointer;
   z-index: 10;
