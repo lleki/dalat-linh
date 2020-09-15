@@ -33,8 +33,6 @@ const App = () => {
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} artists={artists} />
           <LanguageSelect />
-
-          <Route path="/" component={MainPage} />
           {artists.map((artist) => {
             return <Route exact path={"/" + artist} component={ArtistPage} />;
           })}

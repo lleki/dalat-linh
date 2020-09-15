@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
 
 import { I18nContext } from "./i18n";
-import EN from "./i18n/en";
-import FR from "./i18n/fr";
+
 import styled from "styled-components";
 const StyledButton = styled.button`
   position: absolute;
@@ -21,7 +20,7 @@ const StyledButton = styled.button`
 `;
 
 const LanguageSelect = (props) => {
-  const { langCode, dispatch } = useContext(I18nContext);
+  const { dispatch } = useContext(I18nContext);
   const [currentLanguage, setCurrentLanguage] = useState("fr");
   const lang = currentLanguage === "fr" ? "fr" : "en"
   const onFrenchSelect = (e) => {

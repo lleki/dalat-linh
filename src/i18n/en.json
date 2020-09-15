@@ -1,9 +1,10 @@
 {
-  "mainpage": "introduction text here",
+  "the-essentials": "The Essentials",
   "portrait1": {
+    "artistText": "Artist",
     "fullName": "Trini Trang",
     "occupation": "graphic designer",
-    "city": "Montreal",
+    "city": "Montreal, QC",
     "description": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent egestas orci lacinia bibendum placerat. Nulla semper ligula lectus, eget tempor erat semper eu. Vestibulum tempor sem ac purus eleifend, pharetra efficitur elit efficitur. Pellentesque fermentum feugiat interdum. Integer imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque. Vivamus porta sit amet enim at placerat. Suspendisse hendrerit, justo in auctor consequat, lacus ante sodales leo, eu pellentesque enim eros nec eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
   }
 }

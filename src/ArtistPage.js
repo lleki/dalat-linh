@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "./i18n";
 const TriniTrang = require("./images/TriniTrang.png");
+const TriniTrangCloseUp = require("./images/Trini_CloseUp.png");
+
 
 const StyledSection = styled.section`
   position: relative;
@@ -10,6 +12,20 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   background: #000;
+  border-top: 1px solid #efece2;
+  border-bottom: 1px solid #efece2;
+`;
+const StyledCloseUpContainer = styled.div`
+  position: relative;
+  height: 898px;
+  width: 864px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #efece2;
+  border-left: 1px solid #efece2;
+  padding: 0px 84px;
 `;
 
 const MainPagePortrait = styled.div`
@@ -57,6 +73,7 @@ const MainInfoContainer = styled.div`
   flex-direction: column;
   text-align: center;
   padding-bottom: 32px;
+  align-items: center;
 `;
 const SectionHeaderText = styled.div`
   font-size: 56px;
@@ -66,7 +83,33 @@ const SectionHeaderText = styled.div`
 const SubheaderText = styled.div`
   font-size: 13px;
   line-height: 15px;
-  letter-spacing: 8%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 4px;
+`;
+const StyledArtistText = styled.span`
+font-size: 16px;
+line-height: 25px;
+text-align: center;
+letter-spacing: 4px;
+ border-bottom: 1px solid #efece2;
+ color: #efece2;
+ text-transform: uppercase;
+ margin-bottom: 24px;
+`;
+const StyledEssentielsText = styled.div`
+font-size: 56px;
+line-height: 65px;
+text-align: center;
+letter-spacing: 4px;
+text-transform: uppercase;
+padding: 80px 0px;
+color: #efece2;
+border-bottom: 1px solid #efece2;
+`;
+const PhotoGridContainer = styled.div`
+height: 100%;
+width: 100%;
 `;
 
 const ArtistPage = () => {
@@ -75,11 +118,11 @@ const ArtistPage = () => {
     <MainPagePortrait>
       <StyledSection className="main-portrait">
         <PortraitImage>
-          <img src={TriniTrang} />
+          <img src={TriniTrang} width={700}/>
         </PortraitImage>
         <MainPagePortraitTextContainer>
           <MainPagePortraitText>
-            <MainInfoContainer>
+            <MainInfoContainer><StyledArtistText>{translate("portrait1.artistText")}</StyledArtistText>
               <SectionHeaderText>
                 {translate("portrait1.fullName")}
               </SectionHeaderText>
@@ -97,18 +140,18 @@ const ArtistPage = () => {
       </StyledSection>
       <StyledSection className="close-up-portrait">
         <MainPagePortraitTextContainer>
-          close-up-portrait goes here
+          <StyledCloseUpContainer><img src={TriniTrangCloseUp}/></StyledCloseUpContainer>
         </MainPagePortraitTextContainer>
       </StyledSection>
       <StyledSection className="les-essentiels">
-        <MainPagePortraitTextContainer>
-          gallery goes here
-        </MainPagePortraitTextContainer>
+
+          <StyledEssentielsText>{translate("the-essentials")}</StyledEssentielsText>
+
+        <PhotoGridContainer>photos here</PhotoGridContainer>
       </StyledSection>
 
       <StyledSection className="about-the-project">
         <MainPagePortraitTextContainer>
-          {" "}
           <SectionHeaderText>Le Project</SectionHeaderText>
           <MainDescriptionContainer>
             Lorem ipsum dolor sit amet id porta nibh venenatis cras sed felis
