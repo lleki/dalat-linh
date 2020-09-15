@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
 import LanguageSelect from "./LanguageSelect";
@@ -9,7 +9,6 @@ import ArtistPage from "./ArtistPage";
 import MainPage from "./MainPage";
 import { I18nContext } from "./i18n";
 import { Burger, Menu } from "./components";
-import { StyledMenu } from "./components/Menu/Menu";
 
 const MainAppContainer = styled.div`
   display: flex;
@@ -25,22 +24,20 @@ const MainAppContainer = styled.div`
 const App = () => {
   const { translate } = useContext(I18nContext);
   const [open, setOpen] = useState(false);
-  const artists = ["Trini_Trang"]
+  const artists = ["Trini_Trang"];
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Switch>
         <MainAppContainer>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} artists={artists}/>
+          <Menu open={open} setOpen={setOpen} artists={artists} />
           <LanguageSelect />
 
           <Route path="/" component={MainPage} />
-            {artists.map(artist =>{
-                return <Route exact path={"/"+ artist} component={ArtistPage} />
-            }
-            )}
-
+          {artists.map((artist) => {
+            return <Route exact path={"/" + artist} component={ArtistPage} />;
+          })}
         </MainAppContainer>
       </Switch>
     </ThemeProvider>

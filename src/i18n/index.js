@@ -43,6 +43,7 @@ export const I18nContextProvider = ({ children }) => {
     I18nContext. For now, the only action we will have
     is setting language */
   const reducer = (state, action) => {
+    console.log("action", action);
     switch (action.type) {
       case "setLanguage":
         return {

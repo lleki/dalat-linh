@@ -43,14 +43,14 @@ export const StyledMenu = styled.nav`
 `;
 
 const artistName = {
-    "Trini_Trang": "Trini Trang"
-}
+  Trini_Trang: "Trini Trang",
+};
 const Menu = ({ open, artists }) => {
   return (
     <StyledMenu open={open}>
-      <Link to="/">Home</Link>
-        {artists.map(artist => <Link to={"/" + artist}>{artistName[artist]}</Link>)}
-
+      {artists.map((artist) => (
+        <Link to={"/" + artist}>{artistName[artist]}</Link>
+      ))}
     </StyledMenu>
   );
 };
