@@ -10,9 +10,9 @@ export const StyledBurger = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-width: 92px;
-    height: 92px;
-    padding: 20px;
+  width: 92px;
+  height: 92px;
+  padding: 20px;
   border: 1px solid black;
   background: ${({ theme }) => theme.primaryLight};
   cursor: pointer;
@@ -33,7 +33,8 @@ width: 92px;
     transform-origin: 1px;
 
     :first-child {
-      transform: ${({ open }) => (open ? "translate(7px,-10px) rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) =>
+        open ? "translate(7px,-10px) rotate(45deg)" : "rotate(0)"};
     }
 
     :nth-child(2) {
@@ -42,7 +43,8 @@ width: 92px;
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg) translate(0px,10px)" : "rotate(0)")};
+      transform: ${({ open }) =>
+        open ? "rotate(-45deg) translate(0px,10px)" : "rotate(0)"};
     }
   }
 `;
