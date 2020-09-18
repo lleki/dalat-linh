@@ -7,10 +7,12 @@ export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background: ${({ theme }) => theme.primaryLight};
   height: 100vh;
+  width: 50%;
   text-align: left;
-  padding: 2rem;
+  padding: 14px;
   position: absolute;
   top: 0;
   right: 0;
@@ -22,11 +24,11 @@ export const StyledMenu = styled.nav`
   }
 
   a {
-    font-size: 2rem;
+    font-size: 36px;
+    line-height: 36px;
     text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
+    padding: 14px;
+    letter-spacing: 2px;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
     transition: color 0.3s linear;
@@ -38,18 +40,19 @@ export const StyledMenu = styled.nav`
 
     &:hover {
       color: ${({ theme }) => theme.primaryHover};
+      text-decoration: underline;
+      
     }
   }
 `;
 
-const artistName = {
-  Trini_Trang: "Trini Trang",
-};
 const Menu = ({ open, artists }) => {
   return (
     <StyledMenu open={open}>
       {artists.map((artist) => (
-        <Link to={"/" + artist}>{artistName[artist]}</Link>
+        <Link key={artist.id} to={"/" + artist.name}>
+          {artist.name}
+        </Link>
       ))}
     </StyledMenu>
   );

@@ -4,10 +4,9 @@ import { I18nContext } from "./i18n";
 const TriniTrang = require("./images/TriniTrang.png");
 const TriniTrangCloseUp = require("./images/Trini_CloseUp.png");
 
-
 const StyledSection = styled.section`
   position: relative;
-  height: 100vh;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,28 +87,28 @@ const SubheaderText = styled.div`
   margin-top: 4px;
 `;
 const StyledArtistText = styled.span`
-font-size: 16px;
-line-height: 25px;
-text-align: center;
-letter-spacing: 4px;
- border-bottom: 1px solid #efece2;
- color: #efece2;
- text-transform: uppercase;
- margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 4px;
+  border-bottom: 1px solid #efece2;
+  color: #efece2;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 `;
 const StyledEssentielsText = styled.div`
-font-size: 56px;
-line-height: 65px;
-text-align: center;
-letter-spacing: 4px;
-text-transform: uppercase;
-padding: 80px 0px;
-color: #efece2;
-border-bottom: 1px solid #efece2;
+  font-size: 56px;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding: 80px 0px;
+  color: #efece2;
+  border-bottom: 1px solid #efece2;
 `;
 const PhotoGridContainer = styled.div`
-height: 100%;
-width: 100%;
+  height: 100%;
+  width: 100%;
 `;
 
 const ArtistPage = () => {
@@ -118,11 +117,14 @@ const ArtistPage = () => {
     <MainPagePortrait>
       <StyledSection className="main-portrait">
         <PortraitImage>
-          <img src={TriniTrang} width={700}/>
+          <img src={TriniTrang} width={700} />
         </PortraitImage>
         <MainPagePortraitTextContainer>
           <MainPagePortraitText>
-            <MainInfoContainer><StyledArtistText>{translate("portrait1.artistText")}</StyledArtistText>
+            <MainInfoContainer>
+              <StyledArtistText>
+                {translate("portrait1.artistText")}
+              </StyledArtistText>
               <SectionHeaderText>
                 {translate("portrait1.fullName")}
               </SectionHeaderText>
@@ -140,12 +142,15 @@ const ArtistPage = () => {
       </StyledSection>
       <StyledSection className="close-up-portrait">
         <MainPagePortraitTextContainer>
-          <StyledCloseUpContainer><img src={TriniTrangCloseUp}/></StyledCloseUpContainer>
+          <StyledCloseUpContainer>
+            <img src={TriniTrangCloseUp} />
+          </StyledCloseUpContainer>
         </MainPagePortraitTextContainer>
       </StyledSection>
       <StyledSection className="les-essentiels">
-
-          <StyledEssentielsText>{translate("the-essentials")}</StyledEssentielsText>
+        <StyledEssentielsText>
+          {translate("the-essentials")}
+        </StyledEssentielsText>
 
         <PhotoGridContainer>photos here</PhotoGridContainer>
       </StyledSection>

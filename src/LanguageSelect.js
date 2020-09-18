@@ -22,7 +22,7 @@ const StyledButton = styled.button`
 const LanguageSelect = (props) => {
   const { dispatch } = useContext(I18nContext);
   const [currentLanguage, setCurrentLanguage] = useState("fr");
-  const lang = currentLanguage === "fr" ? "fr" : "en"
+  const lang = currentLanguage === "fr" ? "fr" : "en";
   const onFrenchSelect = (e) => {
     e.preventDefault();
     dispatch({ type: "setLanguage", payload: lang });

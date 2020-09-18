@@ -24,7 +24,17 @@ const MainAppContainer = styled.div`
 const App = () => {
   const { translate } = useContext(I18nContext);
   const [open, setOpen] = useState(false);
-  const artists = ["Trini_Trang"];
+  const artists = [
+    { id: 1, name: "Buffy" },
+    { id: 2, name: "Cordelia" },
+    { id: 3, name: "Trini" },
+    { id: 4, name: "Faith" },
+    { id: 5, name: "Xander" },
+    { id: 6, name: "Willow" },
+    { id: 7, name: "Tara" },
+    { id: 8, name: "Rupert" },
+    { id: 9, name: "L'Artiste" },
+  ];
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -34,7 +44,16 @@ const App = () => {
           <Menu open={open} setOpen={setOpen} artists={artists} />
           <LanguageSelect />
           {artists.map((artist) => {
-            return <Route exact path={"/" + artist} component={ArtistPage} />;
+            return (
+              <Route
+                key={artist.id}
+                exact
+                path={"/" + artist.name}
+                component={() => (
+                  <ArtistPage key={artist.id} artist={artist.name} />
+                )}
+              />
+            );
           })}
         </MainAppContainer>
       </Switch>
