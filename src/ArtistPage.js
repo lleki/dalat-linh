@@ -4,7 +4,7 @@ import { I18nContext } from "./i18n";
 
 import Gallery from "./components/Gallery";
 import History from "./components/History";
-const TriniTrang = require("./images/TriniTrang.png");
+const TriniTrang = require("./images/trini.png");
 const TriniTrangCloseUp = require("./images/Trini_CloseUp.png");
 
 const MainContainer = styled.div`

@@ -93,7 +93,7 @@ const Burger = ({ open, setOpen }) => {
       <MassiveArtLogo />
       {/*<LaurenceLogo />*/}
       <RightSide>
-        <LanguageSelect isOpen={open}/>
+        <LanguageSelect isOpen={open} />
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
