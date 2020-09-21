@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { bool } from "prop-types";
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { I18nContext } from "../../i18n";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -12,7 +13,7 @@ export const StyledMenu = styled.nav`
   height: 100vh;
   width: 50%;
   text-align: left;
-  padding: 14px;
+  padding: 80px 14px 14px;
   position: absolute;
   top: 0;
   right: 0;
@@ -34,8 +35,9 @@ export const StyledMenu = styled.nav`
     transition: color 0.3s linear;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
+      font-size: 28px;
       text-align: center;
+      line-height: 28px;
     }
 
     &:hover {
@@ -46,8 +48,11 @@ export const StyledMenu = styled.nav`
 `;
 
 const Menu = ({ open, artists }) => {
+  const { translate } = useContext(I18nContext);
   return (
     <StyledMenu open={open}>
+      <Link to={"/"}>{translate("home")}</Link>
+      <Link to={"/history"}>{translate("project")}</Link>
       {artists.map((artist) => (
         <Link key={artist.id} to={"/" + artist.name}>
           {artist.name}

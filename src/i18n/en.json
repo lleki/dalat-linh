@@ -1,14 +1,60 @@
-{
+
+
+{"home": "Home",
+  "project": "The Project",
   "the-essentials": "The Essentials",
-  "portrait1": {
+  "Trini": {
     "biography": "Biography",
     "fullName": "Trini Trang",
     "occupation": "graphic designer",
     "city": "Montreal, QC",
-    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
   },
+"Buffy": {
+"biography": "Biography",
+"fullName": "Buffy",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Cordelia": {
+"biography": "Biography",
+"fullName": "Cordelia",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Faith": {
+"biography": "Biography",
+"fullName": "Faith",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Xander": {
+"biography": "Biography",
+"fullName": "Xander",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Willow": {
+"biography": "Biography",
+"fullName": "Willow",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Tara": {
+"biography": "Biography",
+"fullName": "Tara",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},"Rupert": {
+"biography": "Biography",
+"fullName": "Rupert",
+"occupation": "graphic designer",
+"city": "Montreal, QC",
+"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+},
   "history": {
     "heading": "The Project",
-    "description": "  Lorem ipsum dolor sit amet id porta nibh venenatis cras sed felis eget\n        velit aliquet sagittis id consectetur purus ut faucibus pulvinar\n        elementum integer enim neque volutpat ac tincidunt vitae semaliquam\n        vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet\n        nulla malesuada pellentesque elit eget gravida cum sociis natoque\n        penatibus et magnis dis parturient montes nascetur ridiculus mus\n        mauris vita. Ultricies leo integer malesuada nunc vel risus commodo\n        viverra maecenas accumsan lacus vel facilisis volutpat amet dictum sit\n        amet justo donec enim diam vulputate ut pharetra sit amet aliquam id\n        diam maecenas ultricies mi eget mauris pharetra et ultrices neque\n        ornare aenean euismod."
+    "description": "  Lorem ipsum dolor sit amet id intlandit cursus risus at ultrices mi temque elit eget gravida cum sociis natoque\n        penatibus et magnis dis parturient montes nascetur ridiculus mus\n        mauris vita. Ultricies leo integer malesuada nunc vel risus commodo\n        viverra maecenas accumsan lacus vel facilisis volutpat amet dictum sit\n        amet justo donec enim diam vulputate ut pharetrris pharetra et ultrismod."
   }
 }

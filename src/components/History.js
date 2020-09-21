@@ -6,15 +6,16 @@ import styled from "styled-components";
 import { I18nContext } from "../i18n";
 const StyledSection = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  height: 800px;
+  flex-direction: column;
+  height: 767px;
+  width: 100%;
   align-items: center;
   justify-content: center;
   background: #000;
   @media (max-width: 768px) {
-    flex-basis: column;
-    height: 1120px;
+    height: 849px;
   }
+  order: 4;
 `;
 const SectionHeaderText = styled.div`
   font-size: 56px;
@@ -26,6 +27,15 @@ const SectionHeaderText = styled.div`
     margin: 40px 0px;
   }
 `;
+
+const StyledLowerBlockContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  @media (max-width: 768px) {
+    width: 295px;
+  }
+`;
 const StyledProjectHistory = styled.div`
   display: flex;
   flex-direction: column;
@@ -33,13 +43,17 @@ const StyledProjectHistory = styled.div`
   line-height: 20px;
   text-align: center;
   padding: 0px 50px;
+  width: 100%;
   color: #efece2;
+  margin-bottom: 80px;
 `;
 
+const StyledImage = styled.div`
+  margin-left: 50px;
+`;
 const StyledHistoryFooter = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   color: #efece2;
   height: 80px;
@@ -52,13 +66,17 @@ const History = () => {
   return (
     <StyledSection className="about-the-project">
       <SectionHeaderText>{translate("history.heading")}</SectionHeaderText>
-      <StyledProjectHistory>
-        {translate("history.description")}
-      </StyledProjectHistory>
-      <StyledHistoryFooter>
-        <MontrealLogo />
-        <QuebecLogo />
-      </StyledHistoryFooter>
+      <StyledLowerBlockContainer>
+        <StyledProjectHistory>
+          {translate("history.description")}
+        </StyledProjectHistory>
+        <StyledHistoryFooter>
+          <MontrealLogo />
+          <StyledImage>
+            <QuebecLogo />
+          </StyledImage>
+        </StyledHistoryFooter>
+      </StyledLowerBlockContainer>
     </StyledSection>
   );
 };

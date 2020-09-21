@@ -9,29 +9,48 @@ const TriniTrangCloseUp = require("./images/Trini_CloseUp.png");
 
 const MainContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 `;
 
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
-  height: 1000px;
+  flex-basis: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  @media (max-width: 768px) {
+    height: 1120px;
+  }
+  order: 1;
+`;
+const StyledCloseUpContainer = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
   align-items: center;
   justify-content: center;
   background: #000;
   @media (max-width: 768px) {
     flex-basis: column;
-    height: 1120px;
+    height: 482px;
   }
+  order: 2;
 `;
 
 const StyledImage = styled.img`
-  flex: 1 300px;
-  min-width: 0;
-  width: 50%;
-  height: auto;
+  flex: none;
+  // min-width: 0;
+  
+  // height: auto;
+    @media (max-width: 768px) {
+    flex: 1 300px;
+    width: 50%;
+  }
 `;
 
 const StyledCloseUpImage = styled.img`
@@ -132,7 +151,7 @@ const StyledArtistText = styled.span`
   }
 `;
 
-const ArtistPage = () => {
+const ArtistPage = ({ artist }) => {
   const { translate } = useContext(I18nContext);
   return (
     <MainContainer>
@@ -142,31 +161,27 @@ const ArtistPage = () => {
           <MainPagePortraitText>
             <MainInfoContainer>
               <StyledArtistText>
-                {translate("portrait1.biography")}
+                {translate(`${artist}.biography`)}
               </StyledArtistText>
               <SectionHeaderText>
-                {translate("portrait1.fullName")}
+                {translate(`${artist}.fullName`)}
               </SectionHeaderText>
               <SubheaderText>{`${translate(
-                "portrait1.occupation"
+                `${artist}.occupation`
               )} ${String.fromCharCode(183)} ${translate(
-                "portrait1.city"
+                `${artist}.city`
               )}`}</SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
-              {translate("portrait1.description")}
+              {translate(`${artist}.description`)}
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
       </StyledSection>
-      <StyledSection>
-        <StyledBuffer />
+      <StyledCloseUpContainer>
         <StyledCloseUpImage src={TriniTrangCloseUp} />
-        <StyledBuffer />
-      </StyledSection>
-
+      </StyledCloseUpContainer>
       <Gallery />
-
       <History />
     </MainContainer>
   );

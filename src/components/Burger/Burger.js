@@ -1,11 +1,25 @@
 import styled from "styled-components";
 import React from "react";
 import { bool, func } from "prop-types";
+import MassiveArtLogo from "../Icons/MassiveArtLogo";
 
-export const StyledBurger = styled.div`
+// const LaurenceLogo = require("../../images/laurencelogo.png");
+
+const BurgerContainer = styled.div`
   position: absolute;
-  top: 5%;
-  right: 2rem;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+`;
+export const StyledBurger = styled.div`
+  // position: fixed;
+  // top: 40px;
+  transition: top 0.3s;
+  right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +31,11 @@ export const StyledBurger = styled.div`
   background: ${({ theme }) => theme.primaryLight};
   cursor: pointer;
   z-index: 10;
-
+  @media (max-width: 768px) {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+  }
   &:focus {
     outline: none;
   }
@@ -46,16 +64,32 @@ export const StyledBurger = styled.div`
       transform: ${({ open }) =>
         open ? "rotate(-45deg) translate(0px,10px)" : "rotate(0)"};
     }
+    @media (max-width: 768px) {
+      width: 22px;
+      :first-child {
+        transform: ${({ open }) =>
+          open ? "translate(4px,-2px) rotate(45deg)" : "rotate(0)"};
+      }
+      :nth-child(3) {
+        transform: ${({ open }) =>
+          open ? "rotate(-45deg) translate(2px,3px)" : "rotate(0)"};
+      }
+    }
   }
 `;
 
 const Burger = ({ open, setOpen }) => {
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
-      <div />
-      <div />
-      <div />
-    </StyledBurger>
+    <BurgerContainer>
+      <MassiveArtLogo />
+      {/*<LaurenceLogo />*/}
+
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+    </BurgerContainer>
   );
 };
 Burger.propTypes = {

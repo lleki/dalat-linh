@@ -8,7 +8,8 @@ import LanguageSelect from "./LanguageSelect";
 import ArtistPage from "./ArtistPage";
 import MainPage from "./MainPage";
 import { I18nContext } from "./i18n";
-import { Burger, Menu } from "./components";
+import { Burger, Menu, History } from "./components";
+import HomePage from "./HomePage";
 
 const MainAppContainer = styled.div`
   display: flex;
@@ -33,7 +34,7 @@ const App = () => {
     { id: 6, name: "Willow" },
     { id: 7, name: "Tara" },
     { id: 8, name: "Rupert" },
-    { id: 9, name: "L'Artiste" },
+    // { id: 9, name: "L'Artiste" },
   ];
   return (
     <ThemeProvider theme={theme}>
@@ -43,6 +44,13 @@ const App = () => {
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} artists={artists} />
           <LanguageSelect />
+          <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
+          <Route
+            key={"history"}
+            exact
+            path={"/history"}
+            component={() => <History />}
+          />
           {artists.map((artist) => {
             return (
               <Route
