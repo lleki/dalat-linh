@@ -47,23 +47,28 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open, setMenu, artists }) => {
+const Menu = ({ open, setMenu, artists, setPreview }) => {
   const { translate } = useContext(I18nContext);
   return (
     <StyledMenu open={open}>
-      <Link to={"/"}>{translate("home")}</Link>
-      <Link to={"/history"}>{translate("project")}</Link>
+      <Link to={"/"} onClick={() => setMenu(false)}>{translate("home")}</Link>
+      <Link to={"/history"} onClick={() => setMenu(false)}>{translate("project")}</Link>
       {artists.map((artist) => (
-        <Link key={artist.id} to={"/" + artist.name} onClick={() => setMenu(false)}>
-          {artist.name}
-        </Link>
+        <div onMouseEnter={() => setPreview(artist.id)} onClick={() => setMenu(false)}>
+          <Link
+            key={artist.id}
+            to={"/" + artist.name}
+          >
+            {artist.name}
+          </Link>
+        </div>
       ))}
     </StyledMenu>
   );
 };
 Menu.propTypes = {
   open: bool.isRequired,
-    setMenu: func.isRequired,
+  setMenu: func.isRequired,
   artists: array.isRequired,
 };
 export default Menu;

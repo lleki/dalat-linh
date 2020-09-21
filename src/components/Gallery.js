@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import { Link, Route } from "react-router-dom";
-
+import { artistImages } from "../Constants";
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -24,8 +24,8 @@ const StyledSection = styled.section`
 `;
 
 const StyledGalleryImage = styled.img`
-  max-height: 100%;
-  min-width: 100%;
+  // max-height: 100%;
+  // min-width: 100%;
   width: 269px;
   height: 345px;
   object-fit: cover;
@@ -43,6 +43,12 @@ const StyledUl = styled.ul`
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  max-width: 1500px;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 `;
 
 const Styledli = styled.li`
@@ -79,16 +85,6 @@ const artists = [
   { id: 8, name: "rupert" },
   // { id: 9, name: "L'Artiste" },
 ];
-const artistImages = {
-  "1": "buffy",
-  "2": "cordelia",
-  "3": "trini",
-  "4": "faith",
-  "5": "xander",
-  "6": "willow",
-  "7": "tara",
-  "8": "rupert",
-};
 
 const Gallery = ({ showHeader }) => {
   const { translate } = useContext(I18nContext);

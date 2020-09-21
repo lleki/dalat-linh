@@ -9,6 +9,7 @@ import ArtistPage from "./ArtistPage";
 import MainPage from "./MainPage";
 import { I18nContext } from "./i18n";
 import { Burger, Menu, History } from "./components";
+import PreviewPicture from "./PreviewPicture";
 import HomePage from "./HomePage";
 
 const MainAppContainer = styled.div`
@@ -25,9 +26,13 @@ const MainAppContainer = styled.div`
 const App = () => {
   const { translate } = useContext(I18nContext);
   const [open, setOpen] = useState(false);
-  const setMenu = (val) =>{
-    setOpen(val)
-  }
+  const [previewArtist, setPreviewArtist] = useState(null);
+  const setMenu = (val) => {
+    setOpen(val);
+  };
+  const setPreview = (artist) => {
+    setPreviewArtist(artist);
+  };
   const artists = [
     { id: 1, name: "buffy" },
     { id: 2, name: "cordelia" },
@@ -45,8 +50,13 @@ const App = () => {
       <Switch>
         <MainAppContainer>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setMenu={setMenu} artists={artists} />
-
+          <Menu
+            open={open}
+            setMenu={setMenu}
+            artists={artists}
+            setPreview={setPreview}
+          />
+          {open && <PreviewPicture previewArtist={previewArtist} />}
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
           <Route
             key={"history"}
@@ -61,7 +71,7 @@ const App = () => {
                 exact
                 path={"/" + artist.name}
                 component={() => (
-                  <ArtistPage key={artist.id} artist={artist.name} />
+                  <ArtistPage key={artist.id} artist={artist} />
                 )}
               />
             );

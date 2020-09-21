@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "./i18n";
-
 import Gallery from "./components/Gallery";
 import History from "./components/History";
-const TriniTrang = require("./images/trini.png");
-const TriniTrangCloseUp = require("./images/Trini_CloseUp.png");
+import {artistImages} from "./Constants";
+
 
 const MainContainer = styled.div`
   display: flex;
@@ -44,9 +43,11 @@ const StyledCloseUpContainer = styled.section`
 
 const StyledImage = styled.img`
   flex: none;
+  height: 100%;
   @media (max-width: 768px) {
     flex: 1 300px;
     width: 50%;
+    height: 500px;
   }
 `;
 
@@ -144,33 +145,38 @@ const StyledArtistText = styled.span`
 
 const ArtistPage = ({ artist }) => {
   const { translate } = useContext(I18nContext);
+
   return (
     <MainContainer>
       <StyledSection>
-        <StyledImage src={TriniTrang} />
+          <StyledImage
+              src={require(`./images/${artistImages[artist.id]}.png`)}
+          />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
               <StyledArtistText>
-                {translate(`${artist}.biography`)}
+                {translate(`${artist.name}.biography`)}
               </StyledArtistText>
               <SectionHeaderText>
-                {translate(`${artist}.fullName`)}
+                {translate(`${artist.name}.fullName`)}
               </SectionHeaderText>
               <SubheaderText>{`${translate(
-                `${artist}.occupation`
+                `${artist.name}.occupation`
               )} ${String.fromCharCode(183)} ${translate(
-                `${artist}.city`
+                `${artist.name}.city`
               )}`}</SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
-              {translate(`${artist}.description`)}
+              {translate(`${artist.name}.description`)}
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
       </StyledSection>
       <StyledCloseUpContainer>
-        <StyledCloseUpImage src={TriniTrangCloseUp} />
+          <StyledCloseUpImage
+              src={require(`./images/${artistImages[artist.id]}-closeup.png`)}
+          />
       </StyledCloseUpContainer>
       <Gallery showHeader />
       <History />
