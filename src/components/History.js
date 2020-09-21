@@ -55,6 +55,7 @@ const StyledHistoryFooter = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   color: #efece2;
   height: 80px;
   width: 100%;

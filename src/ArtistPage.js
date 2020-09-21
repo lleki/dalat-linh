@@ -44,10 +44,7 @@ const StyledCloseUpContainer = styled.section`
 
 const StyledImage = styled.img`
   flex: none;
-  // min-width: 0;
-  
-  // height: auto;
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     flex: 1 300px;
     width: 50%;
   }
@@ -63,13 +60,6 @@ const StyledCloseUpImage = styled.img`
   max-height: 898px;
   @media (max-width: 768px) {
     order: 1;
-  }
-`;
-const StyledBuffer = styled.div`
-  min-width: 0;
-  flex-basis: 200px;
-  @media (max-width: 768px) {
-    flex-basis: auto;
   }
 `;
 
@@ -96,6 +86,7 @@ const MainDescriptionContainer = styled.div`
   text-align: center;
   padding: 0px 50px;
   color: #efece2;
+  max-width: 500px;
 `;
 
 const MainPagePortraitText = styled.div`
@@ -181,7 +172,7 @@ const ArtistPage = ({ artist }) => {
       <StyledCloseUpContainer>
         <StyledCloseUpImage src={TriniTrangCloseUp} />
       </StyledCloseUpContainer>
-      <Gallery />
+      <Gallery showHeader/>
       <History />
     </MainContainer>
   );

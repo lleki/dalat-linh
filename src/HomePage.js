@@ -16,11 +16,21 @@ const StyledEssentielsText = styled.div`
   text-transform: uppercase;
   padding-top: 52px;
   color: #efece2;
-
+  z-index: 99;
   @media (max-width: 768px) {
     font-size: 26px;
     padding: 0px 46px 20px;
-    line-height: 42px;
+    top: 100px;
+  }
+`;
+const GalleryContainer = styled.div`
+  position: fixed;
+  top: 0;
+
+  margin-top: 100px;
+  width: 100%;
+  @media (max-width: 768px) {
+    margin-top: 150px;
   }
 `;
 
@@ -29,7 +39,9 @@ const HomePage = () => {
   return (
     <div>
       <StyledEssentielsText>{translate("the-essentials")}</StyledEssentielsText>
-      <Gallery showHeader={false} />
+      <GalleryContainer>
+        <Gallery showHeader={false} />
+      </GalleryContainer>
     </div>
   );
 };

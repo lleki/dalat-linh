@@ -14,6 +14,10 @@ const BurgerContainer = styled.div`
   padding: 40px;
   align-items: center;
   justify-content: space-between;
+  z-index: 99;
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
 `;
 export const StyledBurger = styled.div`
   // position: fixed;
