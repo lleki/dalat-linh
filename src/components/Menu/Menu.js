@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { bool } from "prop-types";
+import { bool, func, array } from "prop-types";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { I18nContext } from "../../i18n";
@@ -17,7 +17,7 @@ export const StyledMenu = styled.nav`
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 9;
+  z-index: 60;
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
   @media (max-width: ${({ theme }) => theme.mobile}) {
@@ -47,14 +47,14 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open, artists }) => {
+const Menu = ({ open, setMenu, artists }) => {
   const { translate } = useContext(I18nContext);
   return (
     <StyledMenu open={open}>
       <Link to={"/"}>{translate("home")}</Link>
       <Link to={"/history"}>{translate("project")}</Link>
       {artists.map((artist) => (
-        <Link key={artist.id} to={"/" + artist.name}>
+        <Link key={artist.id} to={"/" + artist.name} onClick={() => setMenu(false)}>
           {artist.name}
         </Link>
       ))}
@@ -63,5 +63,7 @@ const Menu = ({ open, artists }) => {
 };
 Menu.propTypes = {
   open: bool.isRequired,
+    setMenu: func.isRequired,
+  artists: array.isRequired,
 };
 export default Menu;

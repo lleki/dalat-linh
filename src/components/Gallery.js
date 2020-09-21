@@ -7,15 +7,15 @@ const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   height: 1000px;
-  
+
   width: 100%;
   align-items: center;
   justify-content: center;
   background: #000;
   padding-top: 40px;
-     
+
   @media (max-width: 768px) {
-   min-height: 100%;
+    min-height: 100%;
     flex-shrink: 0;
     height: 1120px;
     width: 375px;
@@ -88,7 +88,7 @@ const artistImages = {
   "6": "willow",
   "7": "tara",
   "8": "rupert",
-}
+};
 
 const Gallery = ({ showHeader }) => {
   const { translate } = useContext(I18nContext);
@@ -105,7 +105,9 @@ const Gallery = ({ showHeader }) => {
           return (
             <Styledli>
               <Link key={artist.id} to={"/" + artist.name}>
-                <StyledGalleryImage src={require(`../images/${artistImages[artist.id]}.png`)} />
+                <StyledGalleryImage
+                  src={require(`../images/${artistImages[artist.id]}.png`)}
+                />
               </Link>
             </Styledli>
           );

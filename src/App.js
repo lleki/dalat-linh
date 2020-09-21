@@ -25,6 +25,9 @@ const MainAppContainer = styled.div`
 const App = () => {
   const { translate } = useContext(I18nContext);
   const [open, setOpen] = useState(false);
+  const setMenu = (val) =>{
+    setOpen(val)
+  }
   const artists = [
     { id: 1, name: "buffy" },
     { id: 2, name: "cordelia" },
@@ -42,7 +45,7 @@ const App = () => {
       <Switch>
         <MainAppContainer>
           <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} artists={artists} />
+          <Menu open={open} setMenu={setMenu} artists={artists} />
 
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
           <Route

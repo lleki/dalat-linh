@@ -8,13 +8,13 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   height: 767px;
-      min-height: 100vh;
-    flex-shrink: 0;
+  min-height: 100vh;
+  flex-shrink: 0;
   width: 100%;
   align-items: center;
   justify-content: center;
   background: #000;
-  
+
   @media (max-width: 768px) {
     height: 849px;
   }

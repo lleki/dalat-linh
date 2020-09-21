@@ -31,7 +31,7 @@ const LanguageSelect = ({ isOpen }) => {
     dispatch({ type: "setLanguage", payload: lang });
     setCurrentLanguage("fr");
   };
-  console.log("isOpen", isOpen);
+
   return currentLanguage === "fr" ? (
     <StyledButton open={isOpen} onClick={(e) => onFrenchSelect(e)}>
       FR
