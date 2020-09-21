@@ -16,7 +16,7 @@ const StyledEssentielsText = styled.div`
   text-transform: uppercase;
   padding-top: 52px;
   color: #efece2;
-  z-index: 99;
+  z-index: 50;
   @media (max-width: 768px) {
     font-size: 26px;
     padding: 0px 46px 20px;
@@ -26,7 +26,6 @@ const StyledEssentielsText = styled.div`
 const GalleryContainer = styled.div`
   position: fixed;
   top: 0;
-
   margin-top: 100px;
   width: 100%;
   @media (max-width: 768px) {

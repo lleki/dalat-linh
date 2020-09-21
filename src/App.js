@@ -43,7 +43,7 @@ const App = () => {
         <MainAppContainer>
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} artists={artists} />
-          <LanguageSelect />
+
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
           <Route
             key={"history"}

@@ -3,10 +3,7 @@ import React, { useContext, useState } from "react";
 import { I18nContext } from "./i18n";
 
 import styled from "styled-components";
-const StyledButton = styled.button`
-  position: absolute;
-  top: 5%;
-  right: 10rem;
+const StyledButton = styled.div`
   background: transparent;
   cursor: pointer;
   z-index: 10;
@@ -15,29 +12,30 @@ const StyledButton = styled.button`
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  width: 18px;
-  height: 18px;
+margin-right:36px;
+ @media (max-width: 768px) {
+    color: #000;
+    display: ${({ open }) => (open ? "inline-block" : "none")};
+  }
 `;
 
-const LanguageSelect = (props) => {
+const LanguageSelect = ({isOpen}) => {
   const { dispatch } = useContext(I18nContext);
   const [currentLanguage, setCurrentLanguage] = useState("fr");
   const lang = currentLanguage === "fr" ? "fr" : "en";
   const onFrenchSelect = (e) => {
-    e.preventDefault();
     dispatch({ type: "setLanguage", payload: lang });
     setCurrentLanguage("en");
   };
   const onEnglishSelect = (e) => {
-    e.preventDefault();
-
     dispatch({ type: "setLanguage", payload: lang });
     setCurrentLanguage("fr");
   };
+  console.log('isOpen', isOpen)
   return currentLanguage === "fr" ? (
-    <StyledButton onClick={(e) => onFrenchSelect(e)}>FR</StyledButton>
+    <StyledButton open={isOpen} onClick={(e) => onFrenchSelect(e)}>FR</StyledButton>
   ) : (
-    <StyledButton onClick={(e) => onEnglishSelect(e)}>EN</StyledButton>
+    <StyledButton open={isOpen} onClick={(e) => onEnglishSelect(e)}>EN</StyledButton>
   );
 };
 

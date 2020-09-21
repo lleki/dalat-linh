@@ -172,7 +172,7 @@ const ArtistPage = ({ artist }) => {
       <StyledCloseUpContainer>
         <StyledCloseUpImage src={TriniTrangCloseUp} />
       </StyledCloseUpContainer>
-      <Gallery showHeader/>
+      <Gallery showHeader />
       <History />
     </MainContainer>
   );

@@ -2,9 +2,14 @@ import styled from "styled-components";
 import React from "react";
 import { bool, func } from "prop-types";
 import MassiveArtLogo from "../Icons/MassiveArtLogo";
+import LanguageSelect from "../../LanguageSelect";
 
-// const LaurenceLogo = require("../../images/laurencelogo.png");
-
+const RightSide = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 const BurgerContainer = styled.div`
   position: absolute;
   top: 0;
@@ -87,12 +92,14 @@ const Burger = ({ open, setOpen }) => {
     <BurgerContainer>
       <MassiveArtLogo />
       {/*<LaurenceLogo />*/}
-
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
+      <RightSide>
+        <LanguageSelect isOpen={open}/>
+        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+          <div />
+          <div />
+          <div />
+        </StyledBurger>
+      </RightSide>
     </BurgerContainer>
   );
 };
