@@ -1,29 +1,29 @@
 import styled from "styled-components";
-import { bool, func, array } from "prop-types";
 import React from "react";
 import { artistImages } from "./Constants";
 
-const StyledImage = styled.img`
+const StyledImage = styled.div`
+position:absolute;
+  background-image: url(${(props) => props.image})};
   width: 50%;
-  max-width: 704px;
-  height: auto;
-    @media (max-width: 768px) {
+  height:100%;
+  z-index:99;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 768px) {
     display:none;
   }
-`;
 
+`;
 const PreviewPicture = ({ previewArtist }) => {
   return (
     previewArtist && (
       <StyledImage
-        src={require(`./images/${artistImages[previewArtist]}.png`)}
-      />
+        image={require(`./images/${artistImages[previewArtist]}.png`)}
+      ></StyledImage>
     )
   );
 };
-PreviewPicture.propTypes = {
-  open: bool.isRequired,
-  setMenu: func.isRequired,
-  artists: array.isRequired,
-};
+
 export default PreviewPicture;

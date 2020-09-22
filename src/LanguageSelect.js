@@ -6,15 +6,17 @@ import styled from "styled-components";
 const StyledButton = styled.div`
   background: transparent;
   cursor: pointer;
-  z-index: 10;
+  z-index: 99;
   color: #efece2;
   border: none;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
   margin-right: 36px;
+  color: ${({ open }) => open && "#000"};
   @media (max-width: 768px) {
     color: #000;
+
     display: ${({ open }) => (open ? "inline-block" : "none")};
   }
 `;

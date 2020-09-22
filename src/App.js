@@ -1,16 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Burger, Menu, History } from "./components";
+import PreviewPicture from "./PreviewPicture";
+import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import LanguageSelect from "./LanguageSelect";
-import ArtistPage from "./ArtistPage";
-import MainPage from "./MainPage";
-import { I18nContext } from "./i18n";
-import { Burger, Menu, History } from "./components";
-import PreviewPicture from "./PreviewPicture";
-import HomePage from "./HomePage";
+import ArtistPage from "./components/ArtistPage/";
 
 const MainAppContainer = styled.div`
   display: flex;
@@ -24,7 +21,6 @@ const MainAppContainer = styled.div`
   perspective: 2px;
 `;
 const App = () => {
-  const { translate } = useContext(I18nContext);
   const [open, setOpen] = useState(false);
   const [previewArtist, setPreviewArtist] = useState(null);
   const setMenu = (val) => {
@@ -55,8 +51,9 @@ const App = () => {
             setMenu={setMenu}
             artists={artists}
             setPreview={setPreview}
+            previewArtist={previewArtist}
           />
-          {open && <PreviewPicture previewArtist={previewArtist} />}
+
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
           <Route
             key={"history"}
@@ -70,9 +67,7 @@ const App = () => {
                 key={artist.id}
                 exact
                 path={"/" + artist.name}
-                component={() => (
-                  <ArtistPage key={artist.id} artist={artist} />
-                )}
+                component={() => <ArtistPage key={artist.id} artist={artist} />}
               />
             );
           })}

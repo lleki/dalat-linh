@@ -25,8 +25,6 @@ const BurgerContainer = styled.div`
   }
 `;
 export const StyledBurger = styled.div`
-  // position: fixed;
-  // top: 40px;
   transition: top 0.3s;
   right: 40px;
   display: flex;
@@ -39,7 +37,7 @@ export const StyledBurger = styled.div`
   border: 1px solid black;
   background: ${({ theme }) => theme.primaryLight};
   cursor: pointer;
-  z-index: 10;
+  z-index: 99;
   @media (max-width: 768px) {
     width: 48px;
     height: 48px;

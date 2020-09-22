@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { bool, func, array } from "prop-types";
-import React, { useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import { I18nContext } from "../../i18n";
+import PreviewPicture from "../../PreviewPicture";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -47,23 +48,29 @@ export const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open, setMenu, artists, setPreview }) => {
+const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
   const { translate } = useContext(I18nContext);
   return (
-    <StyledMenu open={open}>
-      <Link to={"/"} onClick={() => setMenu(false)}>{translate("home")}</Link>
-      <Link to={"/history"} onClick={() => setMenu(false)}>{translate("project")}</Link>
-      {artists.map((artist) => (
-        <div onMouseEnter={() => setPreview(artist.id)} onClick={() => setMenu(false)}>
-          <Link
+    <Fragment>
+      {open && <PreviewPicture previewArtist={previewArtist} />}
+      <StyledMenu open={open}>
+        <Link to={"/"} onClick={() => setMenu(false)}>
+          {translate("home")}
+        </Link>
+        <Link to={"/history"} onClick={() => setMenu(false)}>
+          {translate("project")}
+        </Link>
+        {artists.map((artist) => (
+          <div
             key={artist.id}
-            to={"/" + artist.name}
+            onMouseEnter={() => setPreview(artist.id)}
+            onClick={() => setMenu(false)}
           >
-            {artist.name}
-          </Link>
-        </div>
-      ))}
-    </StyledMenu>
+            <Link to={"/" + artist.name}>{artist.name}</Link>
+          </div>
+        ))}
+      </StyledMenu>
+    </Fragment>
   );
 };
 Menu.propTypes = {
