@@ -5,7 +5,6 @@ import Gallery from "./components/Gallery";
 import History from "./components/History";
 import {artistImages} from "./Constants";
 
-
 const MainContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

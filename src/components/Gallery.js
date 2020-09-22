@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { artistImages } from "../Constants";
 const StyledSection = styled.section`
   display: flex;

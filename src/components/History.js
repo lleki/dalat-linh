@@ -15,8 +15,8 @@ const StyledSection = styled.section`
   justify-content: center;
   background: #000;
 
-  @media (max-width: 768px) {
-    height: 849px;
+ @media (max-width: 768px) {
+    height: 812px;
   }
   order: 4;
 `;

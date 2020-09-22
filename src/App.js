@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Burger, Menu, History } from "./components";
-import PreviewPicture from "./PreviewPicture";
 import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import ArtistPage from "./components/ArtistPage/";
+import ArtistPage from "./ArtistPage";
 
 const MainAppContainer = styled.div`
   display: flex;
