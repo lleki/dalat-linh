@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { I18nContext } from "./i18n";
 import Gallery from "./components/Gallery";
 import History from "./components/History";
-import {artistImages} from "./Constants";
+import { artistImages } from "./Constants";
 
 const MainContainer = styled.div`
   display: flex;
@@ -148,9 +148,7 @@ const ArtistPage = ({ artist }) => {
   return (
     <MainContainer>
       <StyledSection>
-          <StyledImage
-              src={require(`./images/${artistImages[artist.id]}.png`)}
-          />
+        <StyledImage src={require(`./images/${artistImages[artist.id]}.png`)} />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
@@ -173,9 +171,9 @@ const ArtistPage = ({ artist }) => {
         </RightPanel>
       </StyledSection>
       <StyledCloseUpContainer>
-          <StyledCloseUpImage
-              src={require(`./images/${artistImages[artist.id]}-closeup.png`)}
-          />
+        <StyledCloseUpImage
+          src={require(`./images/${artistImages[artist.id]}-closeup.png`)}
+        />
       </StyledCloseUpContainer>
       <Gallery showHeader />
       <History />

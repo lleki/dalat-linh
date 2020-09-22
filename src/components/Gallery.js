@@ -24,8 +24,6 @@ const StyledSection = styled.section`
 `;
 
 const StyledGalleryImage = styled.img`
-  // max-height: 100%;
-  // min-width: 100%;
   width: 269px;
   height: 345px;
   object-fit: cover;
@@ -58,6 +56,48 @@ const Styledli = styled.li`
   @media (max-width: 768px) {
     margin: 20px 40px;
   }
+`;
+
+const StyledWrapper = styled.div`
+  position: relative;
+  width: 269px;
+  height: 345px;
+  font-family: "Karla", sans-serif;
+  font-size: 25px;
+  div {
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+ 
+  @media (max-width: 768px) {
+    width: 295px;
+    height: 378px;
+  }
+`;
+
+const StyledCaption = styled.span`
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+`;
+const StyledOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  border: 1px solid #fff;
+ 
 `;
 
 const StyledEssentielsText = styled.div`
@@ -101,9 +141,16 @@ const Gallery = ({ showHeader }) => {
           return (
             <Styledli>
               <Link key={artist.id} to={"/" + artist.name}>
-                <StyledGalleryImage
-                  src={require(`../images/${artistImages[artist.id]}.png`)}
-                />
+                <StyledWrapper>
+                  <StyledGalleryImage
+                    src={require(`../images/${artistImages[artist.id]}.png`)}
+                  />
+                  <StyledOverlay>
+                    <StyledCaption>
+                      {translate(`${artist.name}.fullName`).toUpperCase()}
+                    </StyledCaption>
+                  </StyledOverlay>
+                </StyledWrapper>
               </Link>
             </Styledli>
           );
