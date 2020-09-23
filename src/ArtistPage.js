@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { I18nContext } from "./i18n";
 import Gallery from "./components/Gallery";
 import History from "./components/History";
-import { artistImages } from "./Constants";
+// import { artistImages } from "./Constants";
 
 const MainContainer = styled.div`
   display: flex;
@@ -141,6 +141,17 @@ const StyledArtistText = styled.span`
     margin-bottom: 16px;
   }
 `;
+
+const artistImages = {
+    1: "richard",
+    2: "elitarek",
+    3: "jodie-ann",
+    4: "gabriella",
+    5: "estelle",
+    6: "rowan",
+    7: "yolande",
+    8: "shekh",
+};
 
 const ArtistPage = ({ artist }) => {
   const { translate } = useContext(I18nContext);

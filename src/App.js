@@ -29,14 +29,14 @@ const App = () => {
     setPreviewArtist(artist);
   };
   const artists = [
-    { id: 1, name: "buffy" },
-    { id: 2, name: "cordelia" },
-    { id: 3, name: "trini" },
-    { id: 4, name: "faith" },
-    { id: 5, name: "xander" },
-    { id: 6, name: "willow" },
-    { id: 7, name: "tara" },
-    { id: 8, name: "rupert" },
+    { id: 1, name: "richard" },
+    { id: 2, name: "elitarek" },
+    { id: 3, name: "jodie-ann" },
+    { id: 4, name: "gabriella" },
+    { id: 5, name: "estelle" },
+    { id: 6, name: "rowan" },
+    { id: 7, name: "yolande" },
+    { id: 8, name: "shekh" },
     // { id: 9, name: "L'Artiste" },
   ];
   return (

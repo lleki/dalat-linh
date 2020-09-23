@@ -2,60 +2,60 @@
   "home": "Accueil",
   "project": "Le Projet",
   "the-essentials": "Les Essentiels",
-  "trini": {
+  "richard": {
     "id": 3,
     "biography": "Biographie",
-    "fullName": "Trini Trang",
+    "fullName": "Richard",
     "occupation": "design de graphique",
     "city": "Montreal, QC",
     "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
   },
-  "buffy": {
+  "elitarek": {
     "id": 1,
     "biography": "Biographie",
-    "fullName": "Buffy",
+    "fullName": "Eli-Tarek",
     "occupation": "graphic designer",
     "city": "Montreal, QC",
     "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-  },"cordelia": {
+  },"jodie-ann": {
   "id": 2,
   "biography": "Biographie",
-  "fullName": "Cordelia",
+  "fullName": "Jodie-Ann",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"faith": {
+},"gabriella": {
   "id": 4,
   "biography": "Biographie",
-  "fullName": "Faith",
+  "fullName": "Gabriella",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"xander": {
+},"estelle": {
   "id": 5,
   "biography": "Biographie",
-  "fullName": "Xander",
+  "fullName": "Estelle & Adrienne",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"willow": {
+},"rowan": {
   "id": 6,
   "biography": "Biographie",
-  "fullName": "Willow",
+  "fullName": "Rowan",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"tara": {
+},"yolande": {
   "id": 7,
   "biography": "Biographie",
-  "fullName": "Tara",
+  "fullName": "Yolande",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"rupert": {
+},"shekh": {
   "id": 8,
   "biography": "Biographie",
-  "fullName": "Rupert",
+  "fullName": "Shekh",
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"

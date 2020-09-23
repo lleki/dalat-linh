@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import { Link } from "react-router-dom";
-import { artistImages } from "../Constants";
+// import { artistImages } from "../Constants";
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -115,16 +115,27 @@ const StyledEssentielsText = styled.div`
   }
 `;
 const artists = [
-  { id: 1, name: "buffy" },
-  { id: 2, name: "cordelia" },
-  { id: 3, name: "trini" },
-  { id: 4, name: "faith" },
-  { id: 5, name: "xander" },
-  { id: 6, name: "willow" },
-  { id: 7, name: "tara" },
-  { id: 8, name: "rupert" },
+  { id: 1, name: "richard" },
+  { id: 2, name: "elitarek" },
+  { id: 3, name: "jodie-ann" },
+  { id: 4, name: "gabriella" },
+  { id: 5, name: "estelle" },
+  { id: 6, name: "rowan" },
+  { id: 7, name: "yolande" },
+  { id: 8, name: "shekh" },
   // { id: 9, name: "L'Artiste" },
 ];
+const artistImages = {
+  1: "richard",
+  2: "elitarek",
+  3: "jodie-ann",
+  4: "gabriella",
+  5: "estelle",
+  6: "rowan",
+  7: "yolande",
+  8: "shekh",
+};
+
 
 const Gallery = ({ showHeader }) => {
   const { translate } = useContext(I18nContext);

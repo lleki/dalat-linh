@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { artistImages } from "./Constants";
+// import { artistImages } from "./Constants";
 
 const StyledImage = styled.div`
 position:absolute;
@@ -16,6 +16,18 @@ position:absolute;
   }
 
 `;
+const artistImages = {
+    1: "richard",
+    2: "elitarek",
+    3: "jodie-ann",
+    4: "gabriella",
+    5: "estelle",
+    6: "rowan",
+    7: "yolande",
+    8: "shekh",
+};
+
+
 const PreviewPicture = ({ previewArtist }) => {
   return (
     previewArtist && (
