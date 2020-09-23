@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Burger, Menu, History } from "./components";
+import { Burger, Menu, History, LaurenceBio } from "./components";
 import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route } from "react-router-dom";
@@ -54,6 +54,12 @@ const App = () => {
           />
 
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
+          <Route
+            key={"laurence"}
+            exact
+            path={"/laurence"}
+            component={() => <LaurenceBio />}
+          />
           <Route
             key={"history"}
             exact

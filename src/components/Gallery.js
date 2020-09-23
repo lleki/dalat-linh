@@ -67,10 +67,10 @@ const StyledWrapper = styled.div`
   div {
     &:hover {
       opacity: 1;
-      background-color: rgba(0,0,0,0.5);
+      background-color: rgba(0, 0, 0, 0.5);
     }
   }
- 
+
   @media (max-width: 768px) {
     width: 295px;
     height: 378px;
@@ -97,7 +97,6 @@ const StyledOverlay = styled.div`
   opacity: 0;
   transition: 0.5s ease;
   border: 1px solid #fff;
- 
 `;
 
 const StyledEssentielsText = styled.div`
@@ -123,7 +122,6 @@ const artists = [
   { id: 6, name: "rowan" },
   { id: 7, name: "yolande" },
   { id: 8, name: "shekh" },
-  // { id: 9, name: "L'Artiste" },
 ];
 const artistImages = {
   1: "richard",
@@ -135,7 +133,6 @@ const artistImages = {
   7: "yolande",
   8: "shekh",
 };
-
 
 const Gallery = ({ showHeader }) => {
   const { translate } = useContext(I18nContext);

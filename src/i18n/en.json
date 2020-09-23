@@ -1,7 +1,23 @@
 
 {"home": "Home",
+  "theartist": "The Artist",
   "project": "The Project",
   "the-essentials": "The Essentials",
+  "laurence": {
+    "id": 9,
+    "biography": "Biography",
+    "fullName": "Laurence Philomène",
+    "occupation": "graphic designer",
+    "city": "Montreal, QC",
+    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },  "laurenceassistant": {
+    "id": 10,
+    "biography": "Biography",
+    "fullName": "Laurence Philomène",
+    "occupation": "graphic designer",
+    "city": "Montreal, QC",
+    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
   "richard": {
 "id": 3,
     "biography": "Biography",

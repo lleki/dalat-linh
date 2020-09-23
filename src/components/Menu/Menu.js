@@ -69,6 +69,11 @@ const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
             <Link to={"/" + artist.name}>{artist.name}</Link>
           </div>
         ))}
+        <div onMouseEnter={() => setPreview(9)} onClick={() => setMenu(false)}>
+          <Link to={"/laurence"} onClick={() => setMenu(false)}>
+            {translate("theartist")}
+          </Link>
+        </div>
       </StyledMenu>
     </Fragment>
   );

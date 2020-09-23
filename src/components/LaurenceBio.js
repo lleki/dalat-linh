@@ -1,17 +1,6 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
-import { I18nContext } from "./i18n";
-import Gallery from "./components/Gallery";
-import History from "./components/History";
-// import { artistImages } from "./Constants";
-
-const MainContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: stretch;
-`;
+import React, { useContext } from "react";
+import { I18nContext } from "../i18n";
 
 const StyledSection = styled.section`
   display: flex;
@@ -24,42 +13,41 @@ const StyledSection = styled.section`
   @media (max-width: 768px) {
     height: 1120px;
   }
-  order: 1;
 `;
-const StyledCloseUpContainer = styled.section`
+const StyledAssistanceSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   background: #000;
   @media (max-width: 768px) {
-    flex-basis: column;
-    height: 482px;
+    height: 1120px;
+    flex-direction: column-reverse;
+    margin-bottomL 50px;
   }
-  order: 2;
+  
 `;
 
 const StyledImage = styled.img`
   flex: none;
   height: 100%;
+  width: 50%;
   @media (max-width: 768px) {
     flex: 1 300px;
     width: 50%;
     height: 500px;
   }
 `;
-
-const StyledCloseUpImage = styled.img`
-  flex: 1 300px;
-  min-width: 0;
-  width: 100%;
-  height: auto;
-
-  max-width: 704px;
-  max-height: 898px;
+const StyledAssistantImage = styled.img`
+  flex: none;
+  height: 100%;
+  width: 50%;
   @media (max-width: 768px) {
-    order: 1;
+    flex: 1 300px;
+    width: 100%;
+    height: 500px;
   }
 `;
 
@@ -76,6 +64,23 @@ const RightPanel = styled.div`
   font-size: 40px;
   color: #efece2;
   background: #000;
+`;
+const LeftPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 300px;
+  min-width: 0;
+  height: 100%;
+  max-height: 875px;
+  font-family: "Karla", sans-serif;
+  font-size: 40px;
+  color: #efece2;
+  background: #000;
+  @media (max-width: 768px) {
+    margin: 16px;
+  }
 `;
 
 const MainDescriptionContainer = styled.div`
@@ -142,54 +147,58 @@ const StyledArtistText = styled.span`
   }
 `;
 
-const artistImages = {
-  1: "richard",
-  2: "elitarek",
-  3: "jodie-ann",
-  4: "gabriella",
-  5: "estelle",
-  6: "rowan",
-  7: "yolande",
-  8: "shekh",
-};
-
-const ArtistPage = ({ artist }) => {
+const LaurenceBio = () => {
   const { translate } = useContext(I18nContext);
-
   return (
-    <MainContainer>
+    <div>
       <StyledSection>
-        <StyledImage src={require(`./images/${artistImages[artist.id]}.png`)} />
+        <StyledImage src={require(`../images/laurence.png`)} />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
               <StyledArtistText>
-                {translate(`${artist.name}.biography`)}
+                {translate("laurence.biography")}
               </StyledArtistText>
               <SectionHeaderText>
-                {translate(`${artist.name}.fullName`)}
+                {translate("laurence.fullName")}
               </SectionHeaderText>
               <SubheaderText>{`${translate(
-                `${artist.name}.occupation`
+                "laurence.occupation"
               )} ${String.fromCharCode(183)} ${translate(
-                `${artist.name}.city`
+                "laurence.city"
               )}`}</SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
-              {translate(`${artist.name}.description`)}
+              {translate("laurence.description")}
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
       </StyledSection>
-      <StyledCloseUpContainer>
-        <StyledCloseUpImage
-          src={require(`./images/${artistImages[artist.id]}-closeup.png`)}
-        />
-      </StyledCloseUpContainer>
-      <Gallery showHeader />
-      <History />
-    </MainContainer>
+      <StyledAssistanceSection>
+        <LeftPanel>
+          <MainPagePortraitText>
+            <MainInfoContainer>
+              <StyledArtistText>
+                {translate("laurenceassistant.biography")}
+              </StyledArtistText>
+              <SectionHeaderText>
+                {translate("laurenceassistant.fullName")}
+              </SectionHeaderText>
+              <SubheaderText>{`${translate(
+                "laurenceassistant.occupation"
+              )} ${String.fromCharCode(183)} ${translate(
+                "laurenceassistant.city"
+              )}`}</SubheaderText>
+            </MainInfoContainer>
+            <MainDescriptionContainer>
+              {translate("laurenceassistant.description")}
+            </MainDescriptionContainer>
+          </MainPagePortraitText>
+        </LeftPanel>
+        <StyledAssistantImage src={require(`../images/laurence.png`)} />
+      </StyledAssistanceSection>
+    </div>
   );
 };
 
-export default ArtistPage;
+export default LaurenceBio;
