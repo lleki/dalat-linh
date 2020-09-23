@@ -7,16 +7,16 @@
     "id": 9,
     "biography": "Biographie",
     "fullName": "Laurence Philomène",
-    "occupation": "graphic designer",
+    "occupation": "photographe",
     "city": "Montreal, QC",
-    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+    "description": "Laurence Philomene est un/e photographe vivant à Montréal. Son travail centre les experiences LGBTQ+ à travers des images cinématiques, hautes en saturation et soucieuses du bien-être.\nLe travail de Laurence est informé par ses expériences de vie en tant qu’artiste non- binaire et malade chronique qui a grandi à Montréal. En se concentrant sur des projets collaboratifs, long-terme et autobiographique, Laurence cherche à célébrer les personnes marginalisées, et à étudier l’identité comme un espace en flux constant.\n  \nLaurence travaille en collaboration avec toutes personnes qu’iel photographe, créant des portraits frappants, intimes et honnêtes qui célèbrent la beauté dans chaque être humain. Immédiatement reconnaissable par leurs vibrantes couleurs et lumière naturelle, les images de Laurence revendiquent l’humanité des personnes qui ont été historiquement marginalisées, et agissent comme une letter d’amour envers sa communauté."
   },  "laurenceassistant": {
   "id": 10,
   "biography": "Biographie",
-  "fullName": "Laurence PHILOMÈNE",
-  "occupation": "graphic designer",
+  "fullName": "Camille Rae",
+  "occupation": "artiste",
   "city": "Montreal, QC",
-  "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  "description": "Camille Rae est une artiste basée à Montréal qui a co-produit cette série de portraits avec Laurence. Camille crée des t-shirts, autocollants et cartes postales qui partagent des lessons de vie importantes qu’elle a appris au cours des années - l'importance d'être conscient de soi et intentionnel dans nos actions, ainsi que de savoir que personne ne peut nous aimer mieux que nous-même, et que le plus grand amour de tous commence de l'intérieur."
 },
   "richard": {
     "id": 3,
@@ -47,7 +47,7 @@
   "occupation": "graphic designer",
   "city": "Montreal, QC",
   "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"estelle": {
+},"estelle&adrienne": {
   "id": 5,
   "biography": "Biographie",
   "fullName": "Estelle & Adrienne",
