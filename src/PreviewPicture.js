@@ -25,7 +25,7 @@ const artistImages = {
   // 6: "rowan",
   // 7: "yolande",
   // 8: "shekh",
-  // 9: "laurence",
+  9: "laurence",
 };
 
 const PreviewPicture = ({ previewArtist }) => {
