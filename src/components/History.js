@@ -15,6 +15,9 @@ const StyledSection = styled.section`
   margin-bottom: 16px;
   background: #000;
   order: 4;
+  @media (max-width: 1200px) {
+    margin-top: 100px;
+  }
 `;
 const SectionHeaderText = styled.div`
   font-size: 56px;

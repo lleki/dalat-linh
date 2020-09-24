@@ -17,6 +17,11 @@ const StyledEssentielsText = styled.div`
   padding-top: 52px;
   color: #efece2;
   z-index: 50;
+  @media (max-width: 1070px) {
+    font-size: 26px;
+    padding: 0px 46px 20px;
+    top: 100px;
+  }
   @media (max-width: 768px) {
     font-size: 26px;
     padding: 0px 46px 20px;
@@ -28,8 +33,11 @@ const GalleryContainer = styled.div`
   top: 0;
   margin-top: 100px;
   width: 100%;
-  @media (max-width: 768px) {
-    margin-top: 150px;
+  @media (max-width: 1100px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 1000px) {
+    margin-top: 200px;
   }
 `;
 

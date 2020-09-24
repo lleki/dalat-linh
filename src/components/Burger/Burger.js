@@ -88,7 +88,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-    width: 20%;
+  width: 20%;
 `;
 const StyledLaurenceLogoImage = styled.img`
   width: 205px;

@@ -37,9 +37,9 @@ const StyledAssistanceSection = styled.section`
 
 const StyledImage = styled.img`
   flex: none;
- width: 50%;
+  width: 50%;
   height: auto;
-   @media (max-width: 1000px) {
+  @media (max-width: 1000px) {
     flex: 1 300px;
     width: 100%;
     height: auto;
@@ -55,23 +55,23 @@ const StyledAssistantImage = styled.img`
   // flex: none;
   width: 50%;
   height: auto;
-  flex: 1 500px;     
-  min-width: 0; 
+  flex: 1 500px;
+  min-width: 0;
   @media (max-width: 1268px) {
     width: 80%;
   }
-    @media (max-width: 750px) {
+  @media (max-width: 750px) {
     flex: 1 500px;
     width: 90%;
   }
-      @media (max-width: 700px) {
+  @media (max-width: 700px) {
     flex: 1 500px;
     width: 100%;
   }
 `;
 
 const RightPanel = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;

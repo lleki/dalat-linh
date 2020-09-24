@@ -39,13 +39,13 @@ const StyledGalleryImage = styled.img`
   }
 
   @media (max-width: 1000px) {
+    width: 150px;
+    height: 226px;
+  }
+  @media (max-width: 768px) {
     width: 295px;
     height: 378px;
   }
-  // @media (max-width: 960px) {
-  //   width: 150px;
-  //   height: 226px;
-  // }
   @media (max-width: 400px) {
     width: 295px;
     height: 378px;
@@ -57,8 +57,11 @@ const StyledUl = styled.ul`
   margin: 0;
   padding: 0;
   max-width: 1500px;
-  @media (max-width: 1460px) {
+  @media (max-width: 1442px) {
     max-width: 1000px;
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
   }
   @media (max-width: 960px) {
     max-width: 800px;
@@ -67,6 +70,9 @@ const StyledUl = styled.ul`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+  }
+  @media (max-width: 400px) {
+    width: 100%;
   }
 `;
 
@@ -79,8 +85,13 @@ const Styledli = styled.li`
     height: 276px;
   }
   @media (max-width: 1000px) {
+    width: 150px;
+    height: 226px;
+    margin: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 295px;
     height: 378px;
-    margin: 20px 40px;
   }
   @media (max-width: 400px) {
     width: 295px;
@@ -105,8 +116,13 @@ const StyledWrapper = styled.div`
     height: 286px;
   }
   @media (max-width: 1000px) {
-    width: 295px;
-    height: 378px;
+    width: 150px;
+    height: 226px;
+
+    @media (max-width: 768px) {
+      width: 295px;
+      height: 378px;
+    }
   }
 `;
 
@@ -187,7 +203,9 @@ const Gallery = ({ showHeader }) => {
               <Link key={artist.id} to={"/" + artist.name}>
                 <StyledWrapper>
                   <StyledGalleryImage
-                    src={require(`../images/${artistImages[artist.id]}-thumbnail.jpg`)}
+                    src={require(`../images/${
+                      artistImages[artist.id]
+                    }-thumbnail.jpg`)}
                   />
                   <StyledOverlay>
                     <StyledCaption>

@@ -157,7 +157,7 @@ const SiteWebText = styled.a`
   color: #efece2;
   text-decoration: none;
   text-transform: none;
- border-bottom: 1px solid #efece2;
+  border-bottom: 1px solid #efece2;
   margin-left: 6px;
 `;
 const StyledArtistText = styled.span`
@@ -203,9 +203,17 @@ const ArtistPage = ({ artist }) => {
                 {String.fromCharCode(183)} {translate("pronoun")}:{" "}
                 {translate(`${artist.name}.pronounName`)}
               </SubheaderText>
-              <SubheaderText> <SiteWebText href={translate(`${artist.name}.siteweb`)}>{translate('websiteLabel')}</SiteWebText> &#8250;
-                <SiteWebText href={translate(`${artist.name}.siteweb2`)}>{translate('websiteLabel')}</SiteWebText> &#8250;</SubheaderText>
-
+              <SubheaderText>
+                {" "}
+                <SiteWebText href={translate(`${artist.name}.siteweb`)}>
+                  {translate("websiteLabel")}
+                </SiteWebText>{" "}
+                &#8250;
+                <SiteWebText href={translate(`${artist.name}.siteweb2`)}>
+                  {translate("websiteLabel")}
+                </SiteWebText>{" "}
+                &#8250;
+              </SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
               <p>{translate(`${artist.name}.paragraph1-question`)}</p>
