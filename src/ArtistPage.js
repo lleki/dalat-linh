@@ -192,7 +192,7 @@ const ArtistPage = ({ artist }) => {
               </SubheaderText>
               <SubheaderText>
                 {" "}
-                <SiteWebText href={translate(`${artist.name}.siteweb`)}>
+                <SiteWebText href={translate(`${artist.name}.siteweb`)} target="_blank">
                   {translate("websiteLabel")}
                 </SiteWebText>{" "}
                 &#8250;

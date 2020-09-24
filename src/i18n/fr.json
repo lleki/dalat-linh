@@ -22,7 +22,7 @@
   "richard": {
     "id": 3,
     "siteweb": "https://www.loutec.com/succursale/quincaillerie-saint-hubert-montreal",
-    "siteweb2": "",
+    "siteweb2": " ",
     "pronounName": "il",
     "fullName": "Richard",
     "occupation-description": "Propriétaire de magasin de location d’outils",
@@ -66,7 +66,7 @@
   "jodie-ann": {
     "id": 2,
     "siteweb": "https://www.instagram.com/thelavendercollective.mtl/",
-    "sitewe2": "https://www.facebook.com/thelavendercollective.mtl",
+    "siteweb2": "https://www.facebook.com/thelavendercollective.mtl",
     "fullName": "Jodie-Ann",
     "pronounName": "iel",
     "occupation-description": "Travailleu/se/r sociale",
@@ -132,7 +132,7 @@
     "fullName": "Rowan",
     "pronounName": "iel",
     "siteweb": "instagram.com/onerowanshow",
-    "siteweb2": "",
+    "siteweb2": " ",
     "occupation-description": "Artiste, barista & travailleu/se/r de rue",
     "paragraph1-question": "Qu’est-ce que tu aimes dans ce que tu fais?",
     "paragraph1-answer":"La meilleure partie de mon travail est de connecter avec les clients. Je travaille au Pick-Up\ndepuis plus de deux ans maintenant et parler avec les habitués en est la meilleure partie!\nConnaître leurs noms et leurs commandes par cœur, avoir le temps le matin de discuter avec\neux et de s'assurer que leur journée commence du bon pied est ma chose préférée.",
