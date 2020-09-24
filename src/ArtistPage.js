@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import styled from "styled-components";
 import { I18nContext } from "./i18n";
 import Gallery from "./components/Gallery";
@@ -18,7 +18,7 @@ const StyledSection = styled.section`
   flex-wrap: wrap;
   flex-basis: 100%;
   min-height: 100vh;
-  flex-shrink:0;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
@@ -28,8 +28,8 @@ const StyledCloseUpContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-   min-height: 100vh;
-  flex-shrink:0;
+  min-height: 100vh;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
@@ -38,13 +38,13 @@ const StyledCloseUpContainer = styled.section`
     height: 482px;
   }
   order: 2;
-  
-`;const StyledGalleryWrapper = styled.section`
+`;
+const StyledGalleryWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-   min-height: 100vh;
-  flex-shrink:0;
+  min-height: 100vh;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
@@ -53,7 +53,7 @@ const StyledCloseUpContainer = styled.section`
     height: 482px;
   }
   order: 2;
-  overflow:auto;
+  overflow: auto;
 `;
 
 const StyledImage = styled.img`
@@ -62,7 +62,7 @@ const StyledImage = styled.img`
   @media (max-width: 1280px) {
     flex: 1 500px;
     width: 50%;
-    height: 80%
+    height: 80%;
   }
   @media (max-width: 1000px) {
     flex: 1 500px;
@@ -95,8 +95,8 @@ const RightPanel = styled.div`
   font-size: 40px;
   color: #efece2;
   background: #000;
-   @media (max-width: 768px) {
-    max-height: 60vh
+  @media (max-width: 768px) {
+    max-height: 60vh;
   }
 `;
 
@@ -211,6 +211,12 @@ const ArtistPage = ({ artist }) => {
               <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
               <p>{translate(`${artist.name}.paragraph4-question`)}</p>
               <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
+              {/*<p>{translate(`${artist.name}.paragraph5-question`)}</p>*/}
+              {/*<span>{translate(`${artist.name}.paragraph5-answer`)}</span>*/}
+              {/*<p>{translate(`${artist.name}.paragraph6-question`)}</p>*/}
+              {/*<span>{translate(`${artist.name}.paragraph6-answer`)}</span>*/}
+              {/*<p>{translate(`${artist.name}.paragraph7-question`)}</p>*/}
+              {/*<span>{translate(`${artist.name}.paragraph7-answer`)}</span>*/}
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
@@ -220,9 +226,12 @@ const ArtistPage = ({ artist }) => {
           src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
         />
       </StyledCloseUpContainer>
-      <StyledGalleryWrapper><Gallery showHeader /></StyledGalleryWrapper>
-<StyledCloseUpContainer><History/></StyledCloseUpContainer>
-
+      <StyledGalleryWrapper>
+        <Gallery showHeader />
+      </StyledGalleryWrapper>
+      <StyledCloseUpContainer>
+        <History />
+      </StyledCloseUpContainer>
     </MainContainer>
   );
 };

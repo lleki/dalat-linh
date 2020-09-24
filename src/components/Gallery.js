@@ -79,7 +79,7 @@ const Styledli = styled.li`
     height: 276px;
   }
   @media (max-width: 1000px) {
-  height: 378px;
+    height: 378px;
     margin: 20px 40px;
   }
   @media (max-width: 400px) {
