@@ -1,18 +1,25 @@
 import styled from "styled-components";
 import React, { useContext } from "react";
 import { I18nContext } from "../i18n";
+import assistant from "../images/assistant.jpg";
+import laurence from "../images/laurence.jpg";
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+`;
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
-  @media (max-width: 768px) {
-    height: 1120px;
-  }
 `;
 const StyledAssistanceSection = styled.section`
   display: flex;
@@ -24,38 +31,51 @@ const StyledAssistanceSection = styled.section`
   background: #000;
   @media (max-width: 768px) {
     height: 1120px;
-    flex-direction: column-reverse;
-    margin-bottom: 50px;
+    flex-direction: column;
   }
 `;
 
 const StyledImage = styled.img`
   flex: none;
-  height: 100%;
-  width: 50%;
-  @media (max-width: 768px) {
+ width: 50%;
+  height: auto;
+   @media (max-width: 1000px) {
+    flex: 1 300px;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 750px) {
     flex: 1 300px;
     width: 50%;
     height: auto;
   }
 `;
+
 const StyledAssistantImage = styled.img`
-  flex: none;
-  height: 100%;
+  // flex: none;
   width: 50%;
+  height: auto;
+  flex: 1 500px;     
+  min-width: 0; 
   @media (max-width: 1268px) {
-    flex: 1 300px;
+    width: 80%;
+  }
+    @media (max-width: 750px) {
+    flex: 1 500px;
+    width: 90%;
+  }
+      @media (max-width: 700px) {
+    flex: 1 500px;
     width: 100%;
-    height: 500px;
   }
 `;
 
 const RightPanel = styled.div`
-  display: flex;
+   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 300px;
+  flex: 1 500px;
   min-width: 0;
   height: 100%;
   max-height: 875px;
@@ -63,23 +83,6 @@ const RightPanel = styled.div`
   font-size: 40px;
   color: #efece2;
   background: #000;
-`;
-const LeftPanel = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 300px;
-  min-width: 0;
-  height: 100%;
-  max-height: 875px;
-  font-family: "Karla", sans-serif;
-  font-size: 40px;
-  color: #efece2;
-  background: #000;
-  @media (max-width: 768px) {
-    margin: 16px;
-  }
 `;
 
 const MainDescriptionContainer = styled.div`
@@ -87,10 +90,10 @@ const MainDescriptionContainer = styled.div`
   flex-direction: column;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-align: justify;
   padding: 0px 50px;
   color: #efece2;
-  max-width: 500px;
+  max-width: 600px;
 `;
 
 const MainPagePortraitText = styled.div`
@@ -149,9 +152,9 @@ const StyledArtistText = styled.span`
 const LaurenceBio = () => {
   const { translate } = useContext(I18nContext);
   return (
-    <div>
+    <MainContainer>
       <StyledSection>
-        <StyledImage src={require(`../images/laurence.jpg`)} />
+        <StyledImage src={laurence} />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
@@ -166,7 +169,7 @@ const LaurenceBio = () => {
         </RightPanel>
       </StyledSection>
       <StyledAssistanceSection>
-        <LeftPanel>
+        <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
               <SectionHeaderText>
@@ -177,10 +180,10 @@ const LaurenceBio = () => {
               {translate("laurenceassistant.description")}
             </MainDescriptionContainer>
           </MainPagePortraitText>
-        </LeftPanel>
-        <StyledAssistantImage src={require(`../images/assistant.jpg`)} />
+        </RightPanel>
+        <StyledAssistantImage src={assistant} />
       </StyledAssistanceSection>
-    </div>
+    </MainContainer>
   );
 };
 

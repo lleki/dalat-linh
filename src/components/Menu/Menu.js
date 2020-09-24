@@ -36,7 +36,7 @@ export const StyledMenu = styled.nav`
     transition: color 0.3s linear;
 
     @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 28px;
+      font-size: 22px;
       text-align: center;
       line-height: 28px;
     }
