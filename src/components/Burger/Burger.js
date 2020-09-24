@@ -3,7 +3,14 @@ import React from "react";
 import { bool, func } from "prop-types";
 import MassiveArtLogo from "../Icons/MassiveArtLogo";
 import LanguageSelect from "../../LanguageSelect";
+import laurenceLogo from "../../images/laurencelogowhite.png";
 
+const StyledMassiveArt = styled.div`
+ @media (max-width: 411px) {
+   position:absolute;
+   width: 60px;
+  }
+`;
 const RightSide = styled.div`
   display: flex;
   flex-direction: row;
@@ -88,18 +95,25 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 20%;
 `;
 const StyledLaurenceLogoImage = styled.img`
-  width: 205px;
+  width: 200px;
+  height: auto;
+  margin-left:20px;
+   @media (max-width: 650px) {
+   width: 170px;
+  margin: 0px 85px; 10px; 0px
+  }
 `;
 const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>
       <LogoContainer>
-        <MassiveArtLogo />
+        <StyledMassiveArt><MassiveArtLogo /></StyledMassiveArt>
         <StyledLaurenceLogoImage
-          src={require(`../../images/laurencelogowhite.png`)}
+          src={laurenceLogo}
         />
       </LogoContainer>
 
