@@ -148,6 +148,7 @@ const SubheaderText = styled.div`
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 4px;
+  max-width: 70%;
 `;
 const SiteWebText = styled.a`
   font-size: 13px;

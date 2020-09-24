@@ -21,7 +21,7 @@ const artistImages = {
   2: "eli-tarek",
   // 3: "jodie-ann",
   // 4: "gabriella",
-  // 5: "estelle",
+  5: "estelle",
   // 6: "rowan",
   // 7: "yolande",
   // 8: "shekh",
