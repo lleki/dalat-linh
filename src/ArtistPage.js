@@ -216,12 +216,12 @@ const ArtistPage = ({ artist }) => {
               <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
               <p>{translate(`${artist.name}.paragraph4-question`)}</p>
               <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
-              {/*<p>{translate(`${artist.name}.paragraph5-question`)}</p>*/}
-              {/*<span>{translate(`${artist.name}.paragraph5-answer`)}</span>*/}
-              {/*<p>{translate(`${artist.name}.paragraph6-question`)}</p>*/}
-              {/*<span>{translate(`${artist.name}.paragraph6-answer`)}</span>*/}
-              {/*<p>{translate(`${artist.name}.paragraph7-question`)}</p>*/}
-              {/*<span>{translate(`${artist.name}.paragraph7-answer`)}</span>*/}
+              <p>{translate(`${artist.name}.paragraph5-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph5-answer`)}</span>
+              <p>{translate(`${artist.name}.paragraph6-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph6-answer`)}</span>
+              <p>{translate(`${artist.name}.paragraph7-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph7-answer`)}</span>
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
