@@ -119,7 +119,7 @@ const MainPagePortraitText = styled.div`
   line-height: 20px;
   text-align: center;
   @media (max-width: 768px) {
-    height: 100%;
+    height: 115%;
   }
 `;
 const MainInfoContainer = styled.div`
@@ -196,7 +196,7 @@ const ArtistPage = ({ artist }) => {
               </SectionHeaderText>
               <SubheaderText>
                 {translate(`${artist.name}.occupation-description`)}{" "}
-                {String.fromCharCode(183)} {translate("Pronoun")}:{" "}
+                {String.fromCharCode(183)} {translate("pronoun")}:{" "}
                 {translate(`${artist.name}.pronounName`)}
               </SubheaderText>
               <SiteWebText>{translate(`${artist.name}.siteweb`)}</SiteWebText>
@@ -224,6 +224,11 @@ const ArtistPage = ({ artist }) => {
       <StyledCloseUpContainer>
         <StyledCloseUpImage
           src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
+        />
+      </StyledCloseUpContainer>{" "}
+      <StyledCloseUpContainer>
+        <StyledCloseUpImage
+          src={require(`./images/${artistImages[artist.id]}-closeup2.jpg`)}
         />
       </StyledCloseUpContainer>
       <StyledGalleryWrapper>

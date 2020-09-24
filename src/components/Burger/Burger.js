@@ -84,12 +84,26 @@ export const StyledBurger = styled.div`
     }
   }
 `;
-
+const LogoContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+    width: 20%;
+`;
+const StyledLaurenceLogoImage = styled.img`
+  width: 205px;
+`;
 const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>
-      <MassiveArtLogo />
-      {/*<LaurenceLogo />*/}
+      <LogoContainer>
+        {" "}
+        <MassiveArtLogo />
+        <StyledLaurenceLogoImage
+          src={require(`../../images/laurencelogowhite.png`)}
+        />
+      </LogoContainer>
+
       <RightSide>
         <LanguageSelect isOpen={open} />
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
