@@ -190,7 +190,7 @@ const Gallery = ({ showHeader }) => {
               <Link key={artist.id} to={"/" + artist.name}>
                 <StyledWrapper>
                   <StyledGalleryImage
-                    src={require(`../images/${artistImages[artist.id]}.jpg`)}
+                    src={require(`../images/${artistImages[artist.id]}-thumbnail.jpg`)}
                   />
                   <StyledOverlay>
                     <StyledCaption>
