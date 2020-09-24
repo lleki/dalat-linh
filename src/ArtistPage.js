@@ -17,19 +17,19 @@ const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  flex-shrink:0;
   align-items: center;
   justify-content: center;
   background: #000;
-  @media (max-width: 768px) {
-    height: 1120px;
-  }
   order: 1;
 `;
 const StyledCloseUpContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex-basis: 100%;
+   min-height: 100vh;
+  flex-shrink:0;
   align-items: center;
   justify-content: center;
   background: #000;
@@ -42,11 +42,15 @@ const StyledCloseUpContainer = styled.section`
 
 const StyledImage = styled.img`
   flex: none;
-  height: 100%;
-  @media (max-width: 768px) {
-    flex: 1 300px;
+  height: 100vh;
+  @media (max-width: 1280px) {
+    flex: 1 500px;
     width: 50%;
-    height: 500px;
+    height: 80%
+  }
+  @media (max-width: 1000px) {
+    flex: 1 500px;
+    height: auto;
   }
 `;
 
@@ -55,7 +59,6 @@ const StyledCloseUpImage = styled.img`
   min-width: 0;
   width: 100%;
   height: auto;
-
   max-width: 704px;
   max-height: 898px;
   @media (max-width: 768px) {
@@ -68,7 +71,7 @@ const RightPanel = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 300px;
+  flex: 1 500px;
   min-width: 0;
   height: 100%;
   max-height: 875px;
@@ -76,6 +79,9 @@ const RightPanel = styled.div`
   font-size: 40px;
   color: #efece2;
   background: #000;
+   @media (max-width: 768px) {
+    max-height: 60vh
+  }
 `;
 
 const MainDescriptionContainer = styled.div`
@@ -83,10 +89,10 @@ const MainDescriptionContainer = styled.div`
   flex-direction: column;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
   padding: 0px 50px;
   color: #efece2;
-  max-width: 500px;
+  overflow: auto;
 `;
 
 const MainPagePortraitText = styled.div`
@@ -125,6 +131,13 @@ const SubheaderText = styled.div`
   line-height: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin: 4px;
+`;
+const SiteWebText = styled.div`
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   margin-top: 4px;
 `;
 const StyledArtistText = styled.span`
@@ -137,14 +150,13 @@ const StyledArtistText = styled.span`
   text-transform: uppercase;
   margin-bottom: 24px;
   @media (max-width: 768px) {
-    flex-basis: column;
     margin-bottom: 16px;
   }
 `;
 
 const artistImages = {
   1: "richard",
-  2: "elitarek",
+  2: "eli-tarek",
   3: "jodie-ann",
   4: "gabriella",
   5: "estelle",
@@ -159,31 +171,37 @@ const ArtistPage = ({ artist }) => {
   return (
     <MainContainer>
       <StyledSection>
-        <StyledImage src={require(`./images/${artistImages[artist.id]}.png`)} />
+        <StyledImage src={require(`./images/${artistImages[artist.id]}.jpg`)} />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
-              <StyledArtistText>
-                {translate(`${artist.name}.biography`)}
-              </StyledArtistText>
               <SectionHeaderText>
                 {translate(`${artist.name}.fullName`)}
               </SectionHeaderText>
-              <SubheaderText>{`${translate(
-                `${artist.name}.occupation`
-              )} ${String.fromCharCode(183)} ${translate(
-                `${artist.name}.city`
-              )}`}</SubheaderText>
+              <SubheaderText>
+                {translate(`${artist.name}.occupation-description`)}{" "}
+                {String.fromCharCode(183)} {translate("Pronoun")}:{" "}
+                {translate(`${artist.name}.pronounName`)}
+              </SubheaderText>
+              <SiteWebText>{translate(`${artist.name}.siteweb`)}</SiteWebText>
+              <SiteWebText>{translate(`${artist.name}.siteweb2`)}</SiteWebText>
             </MainInfoContainer>
             <MainDescriptionContainer>
-              {translate(`${artist.name}.description`)}
+              <p>{translate(`${artist.name}.paragraph1-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph1-answer`)}</span>
+              <p>{translate(`${artist.name}.paragraph2-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph2-answer`)}</span>
+              <p>{translate(`${artist.name}.paragraph3-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
+              <p>{translate(`${artist.name}.paragraph4-question`)}</p>
+              <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </RightPanel>
       </StyledSection>
       <StyledCloseUpContainer>
         <StyledCloseUpImage
-          src={require(`./images/${artistImages[artist.id]}-closeup.png`)}
+          src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
         />
       </StyledCloseUpContainer>
       <Gallery showHeader />
