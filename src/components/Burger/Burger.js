@@ -97,7 +97,6 @@ const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>
       <LogoContainer>
-        {" "}
         <MassiveArtLogo />
         <StyledLaurenceLogoImage
           src={require(`../../images/laurencelogowhite.png`)}

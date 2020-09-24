@@ -62,7 +62,7 @@ const StyledImage = styled.img`
   @media (max-width: 1280px) {
     flex: 1 500px;
     width: 50%;
-    height: 80%;
+    height: auto;
   }
   @media (max-width: 1000px) {
     flex: 1 500px;
@@ -159,19 +159,6 @@ const SiteWebText = styled.a`
   text-transform: none;
   border-bottom: 1px solid #efece2;
   margin-left: 6px;
-`;
-const StyledArtistText = styled.span`
-  font-size: 16px;
-  line-height: 25px;
-  text-align: center;
-  letter-spacing: 4px;
-  border-bottom: 1px solid #efece2;
-  color: #efece2;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  @media (max-width: 768px) {
-    margin-bottom: 16px;
-  }
 `;
 
 const artistImages = {
