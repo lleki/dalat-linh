@@ -2,82 +2,94 @@
   "home": "Accueil",
   "theartist": "L' Artiste",
   "project": "Le Projet",
+  "pronoun": "Pronoms",
   "the-essentials": "Les Essentiels",
   "laurence": {
     "id": 9,
-    "biography": "Biographie",
+    "siteweb": "Biographie",
     "fullName": "Laurence Philomène",
     "occupation": "photographe",
-    "city": "Montreal, QC",
     "description": "Laurence Philomene est un/e photographe vivant à Montréal. Son travail centre les experiences LGBTQ+ à travers des images cinématiques, hautes en saturation et soucieuses du bien-être.\nLe travail de Laurence est informé par ses expériences de vie en tant qu’artiste non- binaire et malade chronique qui a grandi à Montréal. En se concentrant sur des projets collaboratifs, long-terme et autobiographique, Laurence cherche à célébrer les personnes marginalisées, et à étudier l’identité comme un espace en flux constant.\n  \nLaurence travaille en collaboration avec toutes personnes qu’iel photographe, créant des portraits frappants, intimes et honnêtes qui célèbrent la beauté dans chaque être humain. Immédiatement reconnaissable par leurs vibrantes couleurs et lumière naturelle, les images de Laurence revendiquent l’humanité des personnes qui ont été historiquement marginalisées, et agissent comme une letter d’amour envers sa communauté."
-  },  "laurenceassistant": {
-  "id": 10,
-  "biography": "Biographie",
-  "fullName": "Camille Rae",
-  "occupation": "artiste",
-  "city": "Montreal, QC",
-  "description": "Camille Rae est une artiste basée à Montréal qui a co-produit cette série de portraits avec Laurence. Camille crée des t-shirts, autocollants et cartes postales qui partagent des lessons de vie importantes qu’elle a appris au cours des années - l'importance d'être conscient de soi et intentionnel dans nos actions, ainsi que de savoir que personne ne peut nous aimer mieux que nous-même, et que le plus grand amour de tous commence de l'intérieur."
-},
+  },
+  "laurenceassistant": {
+    "id": 10,
+    "siteweb": "Biographie",
+    "fullName": "Camille Rae",
+    "occupation": "artiste",
+    "description": "Camille Rae est une artiste basée à Montréal qui a co-produit cette série de portraits avec Laurence. Camille crée des t-shirts, autocollants et cartes postales qui partagent des lessons de vie importantes qu’elle a appris au cours des années - l'importance d'être conscient de soi et intentionnel dans nos actions, ainsi que de savoir que personne ne peut nous aimer mieux que nous-même, et que le plus grand amour de tous commence de l'intérieur."
+  },
   "richard": {
     "id": 3,
-    "biography": "Biographie",
+    "siteweb": "https://www.loutec.com/succursale/quincaillerie-saint-hubert-montreal",
+    "pronounName": "il",
     "fullName": "Richard",
-    "occupation": "design de graphique",
-    "city": "Montreal, QC",
-    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+    "occupation-description": "Propriétaire de magasin de location d’outils",
+   "paragraph1-question": "Qu’est-ce que tu aimes dans ce que tu fais?",
+   "paragraph1-answer": "J’aime le fait que le matériel que nous louons aide les gens dans leurs projets. Les gens qui\nfont des travaux ont de grands rêves, et c’est valorisant d’en faire partie. Lorsqu’il y a des\nurgences - comme un dégât d’eau ou une panne d’électricité - et les gens n’ont pas dormis\npar exemple, ils sont soulagés d’avoir les outils dont ils ont besoin pour rétablir la normalité.",
+    "paragraph2-question": "Comment la pandémie a-t-elle affecté le sens de ton travail?",
+   "paragraph2-answer": "Pendant le confinement, les gens se sont tourné dans le personnel, dans l’intérieur, et\nrapidement ils se sont mis à la rénovation de leur logement. On était un des seuls commerce\nqui était ouvert. J’ai eu de longue conversation avec les gens.",
+    "paragraph3-question": "De quelle manière prends-tu soin (de toi-même et / ou de ta communauté) pendant cette\npériode?",
+   "paragraph3-answer": "Je me suis toujours tourné vers les travaux manuels comme forme de détente. C’est une des\nraisons pour laquelle j’ai ouvert un centre de location d’outils.",
+    "paragraph4-question": "Qu'est-ce qui t’apporte de la joie?",
+   "paragraph4-answer": "Les vielles choses, le cinéma, se réunir en famille - évidemment c’est plus difficile cette année."
   },
-  "elitarek": {
+  "eli-tarek": {
     "id": 1,
-    "biography": "Biographie",
     "fullName": "Eli-Tarek",
-    "occupation": "graphic designer",
-    "city": "Montreal, QC",
+    "pronounName": "Y",
+    "siteweb": "https://www.metatron.press/work/knot-body/",
+    "siteweb2": "https://ca.gofundme.com/f/food-and-medicine-for-kafala-victims-in-lebanon",
+    "occupation-description": "Auteur / Poète",
     "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-  },"jodie-ann": {
-  "id": 2,
-  "biography": "Biographie",
-  "fullName": "Jodie-Ann",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"gabriella": {
-  "id": 4,
-  "biography": "Biographie",
-  "fullName": "Gabriella",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"estelle&adrienne": {
-  "id": 5,
-  "biography": "Biographie",
-  "fullName": "Estelle & Adrienne",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"rowan": {
-  "id": 6,
-  "biography": "Biographie",
-  "fullName": "Rowan",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"yolande": {
-  "id": 7,
-  "biography": "Biographie",
-  "fullName": "Yolande",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"shekh": {
-  "id": 8,
-  "biography": "Biographie",
-  "fullName": "Shekh",
-  "occupation": "graphic designer",
-  "city": "Montreal, QC",
-  "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},
+  },
+  "jodie-ann": {
+    "id": 2,
+    "siteweb": "Biographie",
+    "fullName": "Jodie-Ann",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "gabriella": {
+    "id": 4,
+    "siteweb": "Biographie",
+    "fullName": "Gabriella",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "estelle&adrienne": {
+    "id": 5,
+    "siteweb": "Biographie",
+    "fullName": "Estelle & Adrienne",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "rowan": {
+    "id": 6,
+    "siteweb": "Biographie",
+    "fullName": "Rowan",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "yolande": {
+    "id": 7,
+    "siteweb": "Biographie",
+    "fullName": "Yolande",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "shekh": {
+    "id": 8,
+    "siteweb": "Biographie",
+    "fullName": "Shekh",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
   "history": {
-    "heading": "Le Project",
-    "description": "  Lorem ipsum dolor sit amet id intlandit cursus risus at ultrices mi temque elit eget gravida cum sociis natoque\n        penatibus et magnis dis parturient montes nascetur ridiculus mus\n        mauris vita. Ultricies leo integer malesuada nunc vel risus commodo\n        viverra maecenas accumsan lacus vel facilisis volutpat amet dictum sit\n        amet justo donec enim diam vulputate ut pharetrris pharetra et ultrismod."
+    "heading": "Le Projet",
+    "paragraph1": "Les Essentiels est une installation de 8 sculptures interactives qui présentent, via\nune plateforme en ligne, des portraits qui célèbrent les habitants du quartiers et\néliminent la peur de l'autre et de son voisin liée à la COVID, tout en montrant la\ndiversité du quartier et des personnes qui y vivent.",
+    "paragraph2": "Ces 8 sculptures colorées offrent aux visiteurs 8 portraits photographiques et\nanecdotes de la vie de travailleurs essentiels. Les portraits visent à représenter la\ndiversité du quartier, ainsi qu’à célébrer l’importance de toutes sorte de travailleurs\nessentiels durant la pandémie. Colorée et ludique, cette installation appellera le\ngrand public, à interagir avec l’oeuvre et à découvrir une nouvelle facette du quartier\nde façon créative.",
+    "paragraph3": "Ce projet est également, pour Laurence, une façon de remercier et de célébrer sa\npropre histoire au sein de Villeray-Saint-Michel-Parc-Extension, qui pour\nl’artiste a toujours été sa maison. Laurence souhaite aussi élever et remercier les\ngens qui en font un lieu unique et un arrondissement multiculturel fièrement habité par la classe ouvrière.",
+    "paragraph4": "Notre équipe multidisciplinaire est composée de l’artiste photographe Laurence\nPhilomène, et de l’agence MASSIVart. Le rôle de Laurence Philomène, a été de\nchoisir les individus photographiés, ainsi que de produire les portraits et les\nentrevues. Les décisions liées au design des sculptures et à l’esthétique général du\nprojet ont été prises conjointement entre MASSIVart et Laurence Philomène afin de\nproduire une véritable oeuvre collaborative. MASSIVart est pour sa part responsable\nde la gestion du projet, de la production et du volet web."
+
   }
 }

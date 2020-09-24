@@ -25,7 +25,7 @@ const StyledAssistanceSection = styled.section`
   @media (max-width: 768px) {
     height: 1120px;
     flex-direction: column-reverse;
-    margin-bottomL 50px;
+    margin-bottom: 50px;
   }
   
 `;
@@ -37,14 +37,14 @@ const StyledImage = styled.img`
   @media (max-width: 768px) {
     flex: 1 300px;
     width: 50%;
-    height: 500px;
+    height: auto;
   }
 `;
 const StyledAssistantImage = styled.img`
   flex: none;
   height: 100%;
   width: 50%;
-  @media (max-width: 768px) {
+  @media (max-width: 1268px) {
     flex: 1 300px;
     width: 100%;
     height: 500px;
@@ -152,21 +152,13 @@ const LaurenceBio = () => {
   return (
     <div>
       <StyledSection>
-        <StyledImage src={require(`../images/laurence.png`)} />
+        <StyledImage src={require(`../images/laurence.jpg`)} />
         <RightPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
-              <StyledArtistText>
-                {translate("laurence.biography")}
-              </StyledArtistText>
               <SectionHeaderText>
                 {translate("laurence.fullName")}
               </SectionHeaderText>
-              <SubheaderText>{`${translate(
-                "laurence.occupation"
-              )} ${String.fromCharCode(183)} ${translate(
-                "laurence.city"
-              )}`}</SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
               {translate("laurence.description")}
@@ -178,24 +170,16 @@ const LaurenceBio = () => {
         <LeftPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
-              <StyledArtistText>
-                {translate("laurenceassistant.biography")}
-              </StyledArtistText>
               <SectionHeaderText>
                 {translate("laurenceassistant.fullName")}
               </SectionHeaderText>
-              <SubheaderText>{`${translate(
-                "laurenceassistant.occupation"
-              )} ${String.fromCharCode(183)} ${translate(
-                "laurenceassistant.city"
-              )}`}</SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>
               {translate("laurenceassistant.description")}
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </LeftPanel>
-        <StyledAssistantImage src={require(`../images/laurence.png`)} />
+        <StyledAssistantImage src={require(`../images/assistant.jpg`)} />
       </StyledAssistanceSection>
     </div>
   );

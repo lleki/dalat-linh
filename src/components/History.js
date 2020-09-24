@@ -7,17 +7,13 @@ import { I18nContext } from "../i18n";
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
-  height: 767px;
   min-height: 100vh;
   flex-shrink: 0;
   width: 100%;
   align-items: center;
   justify-content: center;
+  margin-bottom: 16px;
   background: #000;
-
-  @media (max-width: 768px) {
-    height: 812px;
-  }
   order: 4;
 `;
 const SectionHeaderText = styled.div`
@@ -34,21 +30,30 @@ const SectionHeaderText = styled.div`
 const StyledLowerBlockContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 650px;
+  width: 60%;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
   @media (max-width: 768px) {
-    width: 295px;
+    width: 80%;
   }
 `;
-const StyledProjectHistory = styled.div`
+const StyledParagraph = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
+  text-align: justify;
   padding: 0px 50px;
   width: 100%;
   color: #efece2;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
+  @media (max-width: 400px) {
+    width: 360px;
+    font-size: 14px;
+  }
 `;
 
 const StyledImage = styled.div`
@@ -71,9 +76,10 @@ const History = () => {
     <StyledSection className="about-the-project">
       <SectionHeaderText>{translate("history.heading")}</SectionHeaderText>
       <StyledLowerBlockContainer>
-        <StyledProjectHistory>
-          {translate("history.description")}
-        </StyledProjectHistory>
+        <StyledParagraph>{translate("history.paragraph1")}</StyledParagraph>{" "}
+        <StyledParagraph>{translate("history.paragraph2")}</StyledParagraph>{" "}
+        <StyledParagraph>{translate("history.paragraph3")}</StyledParagraph>{" "}
+        <StyledParagraph>{translate("history.paragraph4")}</StyledParagraph>
         <StyledHistoryFooter>
           <MontrealLogo />
           <StyledImage>

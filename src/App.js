@@ -30,14 +30,13 @@ const App = () => {
   };
   const artists = [
     { id: 1, name: "richard" },
-    { id: 2, name: "elitarek" },
+    { id: 2, name: "eli-tarek" },
     { id: 3, name: "jodie-ann" },
     { id: 4, name: "gabriella" },
     { id: 5, name: "estelle&adrienne" },
     { id: 6, name: "rowan" },
     { id: 7, name: "yolande" },
     { id: 8, name: "shekh" },
-    // { id: 9, name: "L'Artiste" },
   ];
   return (
     <ThemeProvider theme={theme}>

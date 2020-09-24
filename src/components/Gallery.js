@@ -18,7 +18,6 @@ const StyledSection = styled.section`
     min-height: 100%;
     flex-shrink: 0;
     height: 1120px;
-    width: 375px;
   }
   order: 3;
 `;
@@ -115,17 +114,23 @@ const StyledEssentielsText = styled.div`
 `;
 const artists = [
   { id: 1, name: "richard" },
-  { id: 2, name: "elitarek" },
-  { id: 3, name: "jodie-ann" },
-  { id: 4, name: "gabriella" },
-  { id: 5, name: "estelle" },
-  { id: 6, name: "rowan" },
-  { id: 7, name: "yolande" },
-  { id: 8, name: "shekh" },
+  { id: 2, name: "eli-tarek" },
+  { id: 1, name: "richard" },
+  { id: 2, name: "eli-tarek" },
+  { id: 1, name: "richard" },
+  { id: 2, name: "eli-tarek" },
+  { id: 1, name: "richard" },
+  { id: 2, name: "eli-tarek" },
+  // { id: 3, name: "jodie-ann" },
+  // { id: 4, name: "gabriella" },
+  // { id: 5, name: "estelle&adrienne" },
+  // { id: 6, name: "rowan" },
+  // { id: 7, name: "yolande" },
+  // { id: 8, name: "shekh" },
 ];
 const artistImages = {
   1: "richard",
-  2: "elitarek",
+  2: "eli-tarek",
   3: "jodie-ann",
   4: "gabriella",
   5: "estelle",
@@ -151,7 +156,7 @@ const Gallery = ({ showHeader }) => {
               <Link key={artist.id} to={"/" + artist.name}>
                 <StyledWrapper>
                   <StyledGalleryImage
-                    src={require(`../images/${artistImages[artist.id]}.png`)}
+                    src={require(`../images/${artistImages[artist.id]}.jpg`)}
                   />
                   <StyledOverlay>
                     <StyledCaption>

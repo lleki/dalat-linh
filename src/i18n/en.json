@@ -1,84 +1,96 @@
-
-{"home": "Home",
+{
+  "home": "Home",
   "theartist": "The Artist",
   "project": "The Project",
+  "pronoun": "Pronoun",
   "the-essentials": "Les Essentiels",
   "laurence": {
     "id": 9,
-    "biography": "Biography",
+    "siteweb": "www.laurencephilomene.com",
+    "siteweb2": "www.instagram.com/laurencephilomene",
     "fullName": "Laurence Philomène",
-    "occupation": "photographer",
-    "city": "Montreal, QC",
     "description": "Laurence Philomene is a photographer based in Montreal, Canada. Laurence makes colourful work that centres queer and trans experiences, often through long-form and autobiographical projects.\nLaurence's work is informed by their lived experiences as a chronically ill, non-binary transgender artist coming of age amid the rise of social media. Through high-saturated, cinematic and caring images, their work celebrates marginalized existences, and studies identity as a space in constant flux.\nLaurence aims to work in collaboration with every person they photograph - creating striking, intimate portraits that celebrate the beauty in every human being. Instantly recognizable by their signature use of colour and daylight, Laurence's photographs act as a love letter to their community."
-  },  "laurenceassistant": {
+  },
+  "laurenceassistant": {
     "id": 10,
-    "biography": "Biography",
+    "siteweb": "https://www.sensitiveassfish.com/",
     "fullName": "Camille Rae",
-    "occupation": "artist",
-    "city": "Montreal, QC",
+    "siteweb2": "www.instagram.com/sensitiveassfish",
     "description": "Camille Rae is a Montreal-based artist, and co-produced this portrait series with Laurence. Camille makes slogan tees, stickers and postcards that share important life lessons she has learned over the years - the importance of being self-aware and intentional in your actions as well as knowing no one can love you better than you love yourself and the greatest love of all starts from within."
   },
   "richard": {
-"id": 3,
-    "biography": "Biography",
+    "id": 3,
+    "siteweb": "https://www.loutec.com/succursale/quincaillerie-saint-hubert-montreal",
+    "pronounName": "he/him",
     "fullName": "Richard",
-    "occupation": "graphic designer",
-    "city": "Montreal, QC",
-    "description": "\"Lorem ipsum dolor sit amibulum tempornteger imperdiet fringilla sodales. Cras risus magna, ultricies id rutrum vitae, rutrum eget urna. Sed accumsan dolor augue, vel laoreet mi tincidunt eget.\\n\" +\n      \"\\n\" +\n      \"Sed id molestie mauris. Suspendisse iaculis maximus nisi in pellentesque.o in auctor consequat, lacus ante sodales le habitant morbi tristique senectus et netelis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+    "occupation-description": "Owner of a tool rental store",
+    "paragraph1-question": "What do you love about what you do?",
+    "paragraph1-answer": "I love the fact that the materials we rent out help people with their projects. People who dorenovations have big dreams, and it is rewarding to be a part of it. When there are emergencies - like water damage or a power outage - and people haven’t slept for example,they are relieved to have the tools they need to restore normalcy.",
+    "paragraph2-question": "How has the pandemic affected the meaning of your work?",
+    "paragraph2-answer": "During lockdown, people turned inward and into their homes and quickly started wanting to renovate their spaces. We were one of the only tool businesses open at the time. I got tohave some long conversations with clients.",
+    "paragraph3-question": "In what ways do you take care (of yourself, and/or your community) during this time?",
+    "paragraph3-answer": "I have always turned to manual labor as a form of relaxation. That is one of the reasons I decided to open a tool rental center.",
+    "paragraph4-question": "What’s something that brings you joy?",
+    "paragraph4-answer": "Old things, cinema, spending time with my family - obviously that one is harder to do this\nyear."
   },
-"elitarek": {
-        "id": 1,
-"biography": "Biography",
-"fullName": "Eli-Tarek",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"jodie-ann": {
-"id": 2,
-"biography": "Biography",
-"fullName": "Jodie-Ann",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"gabriella": {
-"id": 4,
-"biography": "Biography",
-"fullName": "Gabriella",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"estelle&adrienne": {
-"id": 5,
-"biography": "Biography",
-
-"fullName": "Estelle & Adrienne",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"rowan": {
-"id": 6,
-"biography": "Biography",
-"fullName": "Rowan",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"yolande": {
-"id": 7,
-"biography": "Biography",
-"fullName": "Yolande",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},"shekh": {
-"id": 8,
-"biography": "Biography",
-"fullName": "Shekh",
-"occupation": "graphic designer",
-"city": "Montreal, QC",
-"description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
-},
+  "eli-tarek": {
+    "id": 1,
+    "siteweb": "siteweb",
+    "pronounName": "They / Them",
+    "fullName": "Eli-Tarek",
+    "occupation-description": "Writer / Poet",
+    "siteweb": "https://www.metatron.press/work/knot-body/",
+    "siteweb2": "https://ca.gofundme.com/f/food-and-medicine-for-kafala-victims-in-lebanon",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "jodie-ann": {
+    "id": 2,
+    "siteweb": "https://www.metatron.press/work/knot-body/",
+    "siteweb2": "https://ca.gofundme.com/f/food-and-medicine-for-kafala-victims-in-lebanon",
+    "fullName": "Jodie-Ann",
+    "occupation-description": "Writer / Poet",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "gabriella": {
+    "id": 4,
+    "siteweb": "siteweb",
+    "fullName": "Gabriella",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "estelle&adrienne": {
+    "id": 5,
+    "siteweb": "siteweb",
+    "fullName": "Estelle & Adrienne",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "rowan": {
+    "id": 6,
+    "siteweb": "siteweb",
+    "fullName": "Rowan",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "yolande": {
+    "id": 7,
+    "siteweb": "siteweb",
+    "fullName": "Yolande",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
+  "shekh": {
+    "id": 8,
+    "siteweb": "siteweb",
+    "fullName": "Shekh",
+    "occupation": "graphic designer",
+    "description": "\"Lormus nisi in pellentesque.os et netus et malesuada fames ac turpis egestas. Nam varius tellus justo, eu consectetur erat rhoncus sed. Morbi quis purus quis metus venenatis sagittis. Nulla sed sollicitudin massa, posuere posuere nulla. Cras egestas eget lacus in rutrum. Donec at orci est. Sed mollis arcu volutpat purus convallis, eu viverra libero facilisis. Nam.\",\n"
+  },
   "history": {
     "heading": "The Project",
-    "description": "  Lorem ipsum dolor sit amet id intlandit cursus risus at ultrices mi temque elit eget gravida cum sociis natoque\n        penatibus et magnis dis parturient montes nascetur ridiculus mus\n        mauris vita. Ultricies leo integer malesuada nunc vel risus commodo\n        viverra maecenas accumsan lacus vel facilisis volutpat amet dictum sit\n        amet justo donec enim diam vulputate ut pharetrris pharetra et ultrismod."
+    "paragraph1": "Les Essentiels (the Essentials) is an installation of eight interactive sculptures that present, via an online platform. These portraits celebrate the neighbourhood's residents. They act to mitigate the other's fear in the context of the COVID pandemic while showcasing the diversity of the community and the locals who live there.",
+    "paragraph2": "These eight colourful sculptures offer visitors eight photographic portraits and anecdotes of the life of these essential workers. The portraits are intended to represent the diversity of the neighbourhood and celebrate the importance of all kinds of essential workers during the pandemic. Colourful and playful, this installation invites the public to interact with the artwork and to discover a new side of the area creatively. ",
+    "paragraph3": "For Laurence, this project is a way to show her gratitude and celebrate her own story with Villeray-Saint-Michel-Parc-Extension neighbourhood, a place she calls home. Laurence wishes to thank and elevate the people who give its authenticity to a proud multicultural borough mainly inhabited by the working class.  ",
+    "paragraph4": "Our multidisciplinary team is composed by the photographer Laurence Philomene and the creative agency MASSIVart. Laurence Philomène's role was to select individuals, realized photographic portraits and interviews. Decisions related to sculpture design and the project's overall aesthetics have been taken jointly between MASSIVart and Laurence Philomène to create a truly collaborative work. MASSIVart is in charge of the project management, production and web component."
   }
 }
