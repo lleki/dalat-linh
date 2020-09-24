@@ -7,13 +7,16 @@ const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   height: 1000px;
-
   width: 100%;
   align-items: center;
   justify-content: center;
   background: #000;
   padding-top: 40px;
-
+  @media (max-width: 1550px) {
+    min-height: 100%;
+    flex-shrink: 0;
+    height: 1120px;
+  }
   @media (max-width: 768px) {
     min-height: 100%;
     flex-shrink: 0;
@@ -30,7 +33,20 @@ const StyledGalleryImage = styled.img`
   &:hover {
     opacity: 0.5;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1440px) {
+    width: 210px;
+    height: 286px;
+  }
+
+  @media (max-width: 1000px) {
+    width: 295px;
+    height: 378px;
+  }
+  // @media (max-width: 960px) {
+  //   width: 150px;
+  //   height: 226px;
+  // }
+  @media (max-width: 400px) {
     width: 295px;
     height: 378px;
   }
@@ -41,6 +57,12 @@ const StyledUl = styled.ul`
   margin: 0;
   padding: 0;
   max-width: 1500px;
+  @media (max-width: 1460px) {
+    max-width: 1000px;
+  }
+  @media (max-width: 960px) {
+    max-width: 800px;
+  }
   @media (max-width: 768px) {
     align-items: center;
     justify-content: center;
@@ -52,8 +74,17 @@ const Styledli = styled.li`
   height: 378px;
   flex-grow: 1;
   margin: 40px;
-  @media (max-width: 768px) {
+  @media (max-width: 1440px) {
+    margin: 20px;
+    height: 276px;
+  }
+  @media (max-width: 1000px) {
+  height: 378px;
     margin: 20px 40px;
+  }
+  @media (max-width: 400px) {
+    width: 295px;
+    height: 378px;
   }
 `;
 
@@ -69,8 +100,11 @@ const StyledWrapper = styled.div`
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1440px) {
+    width: 210px;
+    height: 286px;
+  }
+  @media (max-width: 1000px) {
     width: 295px;
     height: 378px;
   }

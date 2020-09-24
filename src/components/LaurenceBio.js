@@ -27,7 +27,6 @@ const StyledAssistanceSection = styled.section`
     flex-direction: column-reverse;
     margin-bottom: 50px;
   }
-  
 `;
 
 const StyledImage = styled.img`

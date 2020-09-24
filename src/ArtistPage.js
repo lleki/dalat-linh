@@ -38,6 +38,22 @@ const StyledCloseUpContainer = styled.section`
     height: 482px;
   }
   order: 2;
+  
+`;const StyledGalleryWrapper = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+   min-height: 100vh;
+  flex-shrink:0;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  @media (max-width: 768px) {
+    flex-basis: column;
+    height: 482px;
+  }
+  order: 2;
+  overflow:auto;
 `;
 
 const StyledImage = styled.img`
@@ -204,8 +220,9 @@ const ArtistPage = ({ artist }) => {
           src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
         />
       </StyledCloseUpContainer>
-      <Gallery showHeader />
-      <History />
+      <StyledGalleryWrapper><Gallery showHeader /></StyledGalleryWrapper>
+<StyledCloseUpContainer><History/></StyledCloseUpContainer>
+
     </MainContainer>
   );
 };
