@@ -50,9 +50,10 @@ const StyledParagraph = styled.div`
   width: 100%;
   color: #efece2;
   margin-bottom: 30px;
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     width: 360px;
     font-size: 14px;
+    padding: 0px 20px;
   }
 `;
 
