@@ -29,14 +29,14 @@ const App = () => {
     setPreviewArtist(artist);
   };
   const artists = [
-    { id: 1, name: "richard" },
-    { id: 2, name: "eli-tarek" },
-    { id: 3, name: "jodie-ann" },
-    { id: 4, name: "gabriella" },
-    { id: 5, name: "estelle&moohk" },
-    { id: 6, name: "rowan" },
-    { id: 7, name: "yolande" },
-    { id: 8, name: "shekh" },
+    { id: 1, name: "richard", url: "richard" },
+    { id: 2, name: "eli-tarek", url: "elitarek" },
+    { id: 3, name: "jodie-ann", url: "jodie-ann"},
+    { id: 4, name: "gabriella", url: "gabriella" },
+    { id: 5, name: "estelle&moohk", url: "estelle&adrienne" },
+    { id: 6, name: "rowan", url: "rowan" },
+    { id: 7, name: "yolande",url: "yolande" },
+    { id: 8, name: "shekh", url: "shekh" },
   ];
   return (
     <ThemeProvider theme={theme}>
@@ -70,7 +70,7 @@ const App = () => {
               <Route
                 key={artist.id}
                 exact
-                path={"/" + artist.name}
+                path={"/" + artist.url}
                 component={() => <ArtistPage key={artist.id} artist={artist} />}
               />
             );

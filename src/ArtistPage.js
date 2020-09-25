@@ -185,12 +185,11 @@ const ArtistPage = ({ artist }) => {
                 {translate(`${artist.name}.fullName`)}
               </SectionHeaderText>
               <SubheaderText>
-                {translate(`${artist.name}.occupation-description`)}{" "}
-                {String.fromCharCode(183)} {translate("pronoun")}:{" "}
+                {translate(`${artist.name}.occupation-description`)}
+                {String.fromCharCode(183)} {translate("pronoun")}:
                 {translate(`${artist.name}.pronounName`)}
               </SubheaderText>
               <SubheaderText>
-                {" "}
                 <SiteWebText
                   href={translate(`${artist.name}.siteweb`)}
                   target="_blank"

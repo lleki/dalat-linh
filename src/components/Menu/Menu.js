@@ -66,7 +66,7 @@ const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
             onMouseEnter={() => setPreview(artist.id)}
             onClick={() => setMenu(false)}
           >
-            <Link to={"/" + artist.name}>{artist.name}</Link>
+            <Link to={"/" + artist.url}>{artist.name}</Link>
           </div>
         ))}
         <div onMouseEnter={() => setPreview(9)} onClick={() => setMenu(false)}>
