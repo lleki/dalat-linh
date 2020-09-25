@@ -20,11 +20,11 @@ const artistImages = {
   1: "richard",
   2: "eli-tarek",
   3: "jodie-ann",
-  // 4: "gabriella",
+  4: "gabriella",
   5: "estelle",
   6: "rowan",
-  // 7: "yolande",
-  // 8: "shekh",
+  7: "yolande",
+  8: "shekh",
   9: "laurence",
 };
 

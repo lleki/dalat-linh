@@ -32,11 +32,10 @@ const App = () => {
     { id: 1, name: "richard" },
     { id: 2, name: "eli-tarek" },
     { id: 3, name: "jodie-ann" },
-    // { id: 4, name: "gabriella" },
     { id: 5, name: "estelle&moohk" },
     { id: 6, name: "rowan" },
-    // { id: 7, name: "yolande" },
-    // { id: 8, name: "shekh" },
+    { id: 7, name: "yolande" },
+    { id: 8, name: "shekh" },
   ];
   return (
     <ThemeProvider theme={theme}>

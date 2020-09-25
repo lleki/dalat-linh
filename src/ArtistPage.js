@@ -174,7 +174,7 @@ const artistImages = {
 
 const ArtistPage = ({ artist }) => {
   const { translate } = useContext(I18nContext);
-
+const scrollToTop = window.scrollTo(0, 0);
   return (
     <MainContainer>
       <StyledSection>
@@ -232,7 +232,7 @@ const ArtistPage = ({ artist }) => {
         />
       </StyledCloseUpContainer>
       <StyledGalleryWrapper>
-        <Gallery showHeader />
+        <Gallery showHeader scrollToTop={scrollToTop} />
       </StyledGalleryWrapper>
       <StyledCloseUpContainer>
         <History />

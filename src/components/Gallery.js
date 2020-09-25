@@ -165,15 +165,12 @@ const StyledEssentielsText = styled.div`
 const artists = [
   { id: 1, name: "richard" },
   { id: 2, name: "eli-tarek" },
-  { id: 1, name: "richard" },
-  { id: 2, name: "eli-tarek" },
-  { id: 2, name: "eli-tarek" },
   { id: 3, name: "jodie-ann" },
-  // { id: 4, name: "gabriella" },
+  { id: 4, name: "gabriella" },
   { id: 5, name: "estelle&moohk" },
   { id: 6, name: "rowan" },
-  // { id: 7, name: "yolande" },
-  // { id: 8, name: "shekh" },
+  { id: 7, name: "yolande" },
+  { id: 8, name: "shekh" },
 ];
 const artistImages = {
   1: "richard",
@@ -186,7 +183,7 @@ const artistImages = {
   8: "shekh",
 };
 
-const Gallery = ({ showHeader }) => {
+const Gallery = ({ showHeader, scrollToTop }) => {
   const { translate } = useContext(I18nContext);
   return (
     <StyledSection>
@@ -200,7 +197,7 @@ const Gallery = ({ showHeader }) => {
         {artists.map((artist) => {
           return (
             <Styledli>
-              <Link key={artist.id} to={"/" + artist.name}>
+              <Link key={artist.id} to={"/" + artist.name} onClick={() => scrollToTop()}>
                 <StyledWrapper>
                   <StyledGalleryImage
                     src={require(`../images/${
