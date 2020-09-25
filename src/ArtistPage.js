@@ -1,9 +1,8 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "./i18n";
 import Gallery from "./components/Gallery";
 import History from "./components/History";
-// import { artistImages } from "./Constants";
 
 const MainContainer = styled.div`
   display: flex;

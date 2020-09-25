@@ -52,21 +52,14 @@ const StyledImage = styled.img`
 `;
 
 const StyledAssistantImage = styled.img`
-  // flex: none;
-  width: 50%;
+  flex: none;
+  width: 70%;
   height: auto;
   flex: 1 500px;
   min-width: 0;
-  @media (max-width: 1268px) {
-    width: 80%;
-  }
-  @media (max-width: 750px) {
-    flex: 1 500px;
-    width: 90%;
-  }
-  @media (max-width: 700px) {
-    flex: 1 500px;
+    @media (max-width: 500px) {
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -84,6 +77,33 @@ const RightPanel = styled.div`
   color: #efece2;
   background: #000;
 `;
+const LeftPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 200px;
+  min-width: 0;
+  height: 100%;
+  max-height: 875px;
+  font-family: "Karla", sans-serif;
+  font-size: 40px;
+  color: #efece2;
+  background: #000;
+`;
+const AssistantPhotoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 200px;
+  max-height: 875px;
+  font-family: "Karla", sans-serif;
+  font-size: 40px;
+  color: #efece2;
+  background: #000;
+`;
+
 
 const MainDescriptionContainer = styled.div`
   display: flex;
@@ -127,27 +147,6 @@ const SectionHeaderText = styled.div`
     margin: 16px 12px;
   }
 `;
-const SubheaderText = styled.div`
-  font-size: 13px;
-  line-height: 15px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 4px;
-`;
-const StyledArtistText = styled.span`
-  font-size: 16px;
-  line-height: 25px;
-  text-align: center;
-  letter-spacing: 4px;
-  border-bottom: 1px solid #efece2;
-  color: #efece2;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  @media (max-width: 768px) {
-    flex-basis: column;
-    margin-bottom: 16px;
-  }
-`;
 
 const LaurenceBio = () => {
   const { translate } = useContext(I18nContext);
@@ -169,7 +168,7 @@ const LaurenceBio = () => {
         </RightPanel>
       </StyledSection>
       <StyledAssistanceSection>
-        <RightPanel>
+        <LeftPanel>
           <MainPagePortraitText>
             <MainInfoContainer>
               <SectionHeaderText>
@@ -180,8 +179,8 @@ const LaurenceBio = () => {
               {translate("laurenceassistant.description")}
             </MainDescriptionContainer>
           </MainPagePortraitText>
-        </RightPanel>
-        <StyledAssistantImage src={assistant} />
+        </LeftPanel>
+        <AssistantPhotoWrapper><StyledAssistantImage src={assistant} /></AssistantPhotoWrapper>
       </StyledAssistanceSection>
     </MainContainer>
   );
