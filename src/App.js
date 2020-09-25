@@ -31,13 +31,14 @@ const App = () => {
   const artists = [
     { id: 1, name: "richard", url: "richard" },
     { id: 2, name: "eli-tarek", url: "elitarek" },
-    { id: 3, name: "jodie-ann", url: "jodie-ann"},
+    { id: 3, name: "jodie-ann", url: "jodie-ann" },
     { id: 4, name: "gabriella", url: "gabriella" },
     { id: 5, name: "estelle&moohk", url: "estelle&adrienne" },
     { id: 6, name: "rowan", url: "rowan" },
-    { id: 7, name: "yolande",url: "yolande" },
+    { id: 7, name: "yolande", url: "yolande" },
     { id: 8, name: "shekh", url: "shekh" },
   ];
+  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name))
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -47,7 +48,7 @@ const App = () => {
           <Menu
             open={open}
             setMenu={setMenu}
-            artists={artists}
+            artists={sortedArtists}
             setPreview={setPreview}
             previewArtist={previewArtist}
           />

@@ -57,7 +57,7 @@ const StyledAssistantImage = styled.img`
   height: auto;
   flex: 1 500px;
   min-width: 0;
-    @media (max-width: 500px) {
+  @media (max-width: 500px) {
     width: 100%;
     height: auto;
   }
@@ -103,7 +103,6 @@ const AssistantPhotoWrapper = styled.div`
   color: #efece2;
   background: #000;
 `;
-
 
 const MainDescriptionContainer = styled.div`
   display: flex;
@@ -180,7 +179,9 @@ const LaurenceBio = () => {
             </MainDescriptionContainer>
           </MainPagePortraitText>
         </LeftPanel>
-        <AssistantPhotoWrapper><StyledAssistantImage src={assistant} /></AssistantPhotoWrapper>
+        <AssistantPhotoWrapper>
+          <StyledAssistantImage src={assistant} />
+        </AssistantPhotoWrapper>
       </StyledAssistanceSection>
     </MainContainer>
   );

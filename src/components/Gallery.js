@@ -186,6 +186,7 @@ const artistImages = {
 
 const Gallery = ({ showHeader, scrollToTop }) => {
   const { translate } = useContext(I18nContext);
+  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name))
   return (
     <StyledSection>
       {showHeader && (
@@ -193,9 +194,8 @@ const Gallery = ({ showHeader, scrollToTop }) => {
           {translate("the-essentials")}
         </StyledEssentielsText>
       )}
-
       <StyledUl>
-        {artists.map((artist) => {
+        {sortedArtists.map((artist) => {
           return (
             <Styledli>
               <Link key={artist.id} to={"/" + artist.url} onClick={() => scrollToTop()}>
