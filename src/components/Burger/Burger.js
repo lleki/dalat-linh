@@ -6,9 +6,9 @@ import LanguageSelect from "../../LanguageSelect";
 import laurenceLogo from "../../images/laurencelogowhite.png";
 
 const StyledMassiveArt = styled.div`
- @media (max-width: 411px) {
-   position:absolute;
-   width: 60px;
+  @media (max-width: 411px) {
+    position: absolute;
+    width: 60px;
   }
 `;
 const RightSide = styled.div`
@@ -111,10 +111,10 @@ const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>
       <LogoContainer>
-        <StyledMassiveArt><MassiveArtLogo /></StyledMassiveArt>
-        <StyledLaurenceLogoImage
-          src={laurenceLogo}
-        />
+        <StyledMassiveArt>
+          <MassiveArtLogo />
+        </StyledMassiveArt>
+        <StyledLaurenceLogoImage src={laurenceLogo} />
       </LogoContainer>
 
       <RightSide>

@@ -43,12 +43,12 @@ const GalleryContainer = styled.div`
 
 const HomePage = () => {
   const { translate } = useContext(I18nContext);
-    const scrollToTop = window.scrollTo(0, 0);
+  const scrollToTop = window.scrollTo(0, 0);
   return (
     <div>
       <StyledEssentielsText>{translate("the-essentials")}</StyledEssentielsText>
       <GalleryContainer>
-        <Gallery showHeader={false} scrollToTop={scrollToTop}/>
+        <Gallery showHeader={false} scrollToTop={scrollToTop} />
       </GalleryContainer>
     </div>
   );

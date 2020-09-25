@@ -197,7 +197,7 @@ const Gallery = ({ showHeader, scrollToTop }) => {
         {artists.map((artist) => {
           return (
             <Styledli>
-              <Link key={artist.id} to={"/" + artist.name} onClick={() => scrollToTop()}>
+              <Link key={artist.id} to={"/" + artist.name}>
                 <StyledWrapper>
                   <StyledGalleryImage
                     src={require(`../images/${

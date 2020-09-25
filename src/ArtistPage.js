@@ -174,7 +174,7 @@ const artistImages = {
 
 const ArtistPage = ({ artist }) => {
   const { translate } = useContext(I18nContext);
-const scrollToTop = window.scrollTo(0, 0);
+  const scrollToTop = window.scrollTo(0, 0);
   return (
     <MainContainer>
       <StyledSection>
@@ -192,7 +192,10 @@ const scrollToTop = window.scrollTo(0, 0);
               </SubheaderText>
               <SubheaderText>
                 {" "}
-                <SiteWebText href={translate(`${artist.name}.siteweb`)} target="_blank">
+                <SiteWebText
+                  href={translate(`${artist.name}.siteweb`)}
+                  target="_blank"
+                >
                   {translate("websiteLabel")}
                 </SiteWebText>{" "}
                 &#8250;
