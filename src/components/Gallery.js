@@ -166,11 +166,11 @@ const StyledEssentielsText = styled.div`
 const artists = [
   { id: 1, name: "richard", url: "richard" },
   { id: 2, name: "eli-tarek", url: "elitarek" },
-  { id: 3, name: "jodie-ann", url: "jodie-ann"},
+  { id: 3, name: "jodie-ann", url: "jodie-ann" },
   { id: 4, name: "gabriella", url: "gabriella" },
   { id: 5, name: "estelle&moohk", url: "estelle&adrienne" },
   { id: 6, name: "rowan", url: "rowan" },
-  { id: 7, name: "yolande",url: "yolande" },
+  { id: 7, name: "yolande", url: "yolande" },
   { id: 8, name: "shekh", url: "shekh" },
 ];
 const artistImages = {
@@ -186,7 +186,7 @@ const artistImages = {
 
 const Gallery = ({ showHeader, scrollToTop }) => {
   const { translate } = useContext(I18nContext);
-  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name))
+  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <StyledSection>
       {showHeader && (
@@ -198,7 +198,11 @@ const Gallery = ({ showHeader, scrollToTop }) => {
         {sortedArtists.map((artist) => {
           return (
             <Styledli>
-              <Link key={artist.id} to={"/" + artist.url} onClick={() => scrollToTop()}>
+              <Link
+                key={artist.id}
+                to={"/" + artist.url}
+                onClick={() => scrollToTop()}
+              >
                 <StyledWrapper>
                   <StyledGalleryImage
                     src={require(`../images/${

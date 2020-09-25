@@ -22,6 +22,7 @@
   "richard": {
     "id": 3,
     "siteweb": "https://www.loutec.com/succursale/quincaillerie-saint-hubert-montreal",
+    "siteweb2": " ",
     "pronounName": "he/him",
     "fullName": "Richard",
     "occupation-description": "Owner of a tool rental store",
@@ -43,7 +44,6 @@
   },
   "eli-tarek": {
     "id": 1,
-    "siteweb": "siteweb",
     "pronounName": "They / Them",
     "fullName": "Eli Tarek",
     "occupation-description": "Writer / Poet",
@@ -111,6 +111,7 @@
   "estelle&moohk": {
     "id": 5,
     "siteweb": "siteweb",
+    "siteweb2": " ",
     "fullName": "Estelle & Moohk",
     "pronounName": "She/her // it",
     "siteweb": "https://cosmicwyrmrat.wordpress.com/",
@@ -136,7 +137,7 @@
     "fullName": "Rowan",
     "pronounName": "They/them",
     "siteweb": "instagram.com/onerowanshow",
-    "siteweb2": "",
+    "siteweb2": " ",
     "occupation-description": "Artist, barista & street worker",
     "paragraph1-question": "What do you love about what you do?",
     "paragraph1-answer":"The best part of my job is keeping up with customers. I’ve worked at the Pick-Up for over two\nyears now and catching up with regulars is the best part of it! Knowing their names and their\norders by heart, having the time in the morning to chat with them and make sure their day\nstarts on the right foot is my favourite thing.",
@@ -179,7 +180,7 @@
   "shekh": {
     "id": 8,
     "siteweb": "https://www.ciussscentreouest.ca/etablissements-et-ressources/clsc/clsc-de-parc-",
-    "siteweb2": "",
+    "siteweb2": " ",
     "fullName": "Shekh",
     "pronounName": "he/him",
     "occupation-description": "CSLC nurse in the blood work center",

@@ -195,12 +195,15 @@ const ArtistPage = ({ artist }) => {
                   target="_blank"
                 >
                   {translate("websiteLabel")}
-                </SiteWebText>{" "}
+                </SiteWebText>
                 &#8250;
-                <SiteWebText href={translate(`${artist.name}.siteweb2`)}>
-                  {translate("websiteLabel")}
-                </SiteWebText>{" "}
-                &#8250;
+                {translate(`${artist.name}.siteweb2`).length > 1 && (
+                  <SiteWebText href={translate(`${artist.name}.siteweb2`)}>
+                    {`${translate("websiteLabel")}`}
+                    <span>&#8250;</span>
+                  </SiteWebText>
+                )}
+
               </SubheaderText>
             </MainInfoContainer>
             <MainDescriptionContainer>

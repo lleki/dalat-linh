@@ -38,7 +38,7 @@ const App = () => {
     { id: 7, name: "yolande", url: "yolande" },
     { id: 8, name: "shekh", url: "shekh" },
   ];
-  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name))
+  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
