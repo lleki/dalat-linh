@@ -5,10 +5,23 @@ import { Link } from "react-router-dom";
 import { I18nContext } from "../../i18n";
 import PreviewPicture from "../../PreviewPicture";
 
-export const StyledMenu = styled.nav`
+const LinksWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  max-height: inherit;
+ 
+    @media (max-height: 670px) {
+       div{
+  height: 40px;
+  }
+    }
+`;
+const StyledMenu = styled.nav`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   background: ${({ theme }) => theme.primaryLight};
   height: 100vh;
@@ -24,7 +37,6 @@ export const StyledMenu = styled.nav`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 100%;
   }
-
   a {
     font-size: 36px;
     line-height: 36px;
@@ -38,7 +50,11 @@ export const StyledMenu = styled.nav`
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 22px;
       text-align: center;
-      line-height: 28px;
+    }
+    @media (max-width: 400px) {
+      font-size: 14px;
+      padding: 0px;
+      line-height: 16px;
     }
 
     &:hover {
@@ -54,27 +70,40 @@ const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
     <Fragment>
       {open && <PreviewPicture previewArtist={previewArtist} />}
       <StyledMenu open={open}>
-        <Link to={"/"} onClick={() => setMenu(false)}>
-          {translate("home")}
-        </Link>
-        <Link to={"/history"} onClick={() => setMenu(false)}>
-          {translate("project")}
-        </Link>
-        {artists.map((artist) => (
+        <LinksWrapper>
+          <div>
+            <Link to={"/"} onClick={() => setMenu(false)}>
+              {translate("home")}
+            </Link>
+          </div>
+          <div>
+            <Link to={"/history"} onClick={() => setMenu(false)}>
+              {translate("project")}
+            </Link>
+          </div>
+
+          {artists.map((artist) => (
+            <div
+              key={artist.id}
+              onMouseEnter={() => setPreview(artist.id)}
+              onClick={() => setMenu(false)}
+            >
+              {artist.name === "eli-tarek" ? (
+                <Link to={"/" + artist.url}>Eli Tarek</Link>
+              ) : (
+                <Link to={"/" + artist.url}>{artist.name}</Link>
+              )}
+            </div>
+          ))}
           <div
-            key={artist.id}
-            onMouseEnter={() => setPreview(artist.id)}
+            onMouseEnter={() => setPreview(9)}
             onClick={() => setMenu(false)}
           >
-            {artist.name === "eli-tarek" ? <Link to={"/" + artist.url}>Eli Tarek</Link> : <Link to={"/" + artist.url}>{artist.name}</Link>}
-
+            <Link to={"/laurence"} onClick={() => setMenu(false)}>
+              {translate("theartist")}
+            </Link>
           </div>
-        ))}
-        <div onMouseEnter={() => setPreview(9)} onClick={() => setMenu(false)}>
-          <Link to={"/laurence"} onClick={() => setMenu(false)}>
-            {translate("theartist")}
-          </Link>
-        </div>
+        </LinksWrapper>
       </StyledMenu>
     </Fragment>
   );
