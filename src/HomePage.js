@@ -31,7 +31,7 @@ const StyledEssentielsText = styled.div`
 const GalleryContainer = styled.div`
   position: fixed;
   top: 0;
-  margin-top: 100px;
+  margin-top: 110px;
   width: 100%;
   @media (max-width: 1100px) {
     margin-top: 0px;
