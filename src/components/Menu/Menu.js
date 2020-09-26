@@ -20,7 +20,7 @@ const LinksWrapper = styled.div`
 `;
 const StyledMenu = styled.nav`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background: ${({ theme }) => theme.primaryLight};
@@ -50,6 +50,7 @@ const StyledMenu = styled.nav`
     @media (max-width: ${({ theme }) => theme.mobile}) {
       font-size: 22px;
       text-align: center;
+      justify-content: flex-start;
     }
     @media (max-width: 400px) {
       font-size: 14px;
