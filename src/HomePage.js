@@ -16,7 +16,7 @@ const StyledEssentielsText = styled.div`
   text-transform: uppercase;
   padding-top: 52px;
   color: #efece2;
-  z-index: 50;
+  
   @media (max-width: 1070px) {
     font-size: 26px;
     padding: 0px 46px 20px;
