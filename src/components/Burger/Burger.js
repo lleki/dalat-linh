@@ -5,12 +5,6 @@ import MassiveArtLogo from "../Icons/MassiveArtLogo";
 import LanguageSelect from "../../LanguageSelect";
 import laurenceLogo from "../../images/laurencelogowhite.png";
 
-const StyledMassiveArt = styled.div`
-  @media (max-width: 411px) {
-    position: absolute;
-    width: 60px;
-  }
-`;
 const RightSide = styled.div`
   display: flex;
   flex-direction: row;
@@ -97,16 +91,23 @@ const LogoContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 20%;
-`;
-const StyledLaurenceLogoImage = styled.img`
-  width: 200px;
-  height: auto;
-  margin-left:20px;
-   @media (max-width: 650px) {
-   width: 170px;
-  margin: 0px 85px; 10px; 0px
+  @media (max-width: 1000px) {
+    width: 30%;
+  }
+  @media (max-width: 500px) {
+    width: 50%;
   }
 `;
+const StyledMassiveArt = styled.div`
+  width: 40%;
+  height: auto;
+`;
+const StyledLaurenceLogoImage = styled.img`
+  width: 60%;
+  height: auto;
+  margin-left: 20px;
+`;
+
 const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>

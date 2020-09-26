@@ -11,12 +11,12 @@ const LinksWrapper = styled.div`
   justify-content: center;
   align-items: center;
   max-height: inherit;
- 
-    @media (max-height: 670px) {
-       div{
-  height: 40px;
-  }
+
+  @media (max-height: 670px) {
+    div {
+      height: 40px;
     }
+  }
 `;
 const StyledMenu = styled.nav`
   display: flex;
