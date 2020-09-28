@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Gallery from "./components/Gallery";
 import { I18nContext } from "./i18n";
 const StyledEssentielsText = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   height: 172px;
   margin: auto;
@@ -29,7 +29,7 @@ const StyledEssentielsText = styled.div`
   }
 `;
 const GalleryContainer = styled.div`
-  position: fixed;
+  position: absolute;
   top: 0;
   margin-top: 110px;
   width: 100%;
