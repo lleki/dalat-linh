@@ -112,6 +112,7 @@ const MainDescriptionContainer = styled.div`
   color: #efece2;
   max-height: 500px;
   overflow: auto;
+  margin-bottom: 10px;
   @media (max-width: 768px) {
     overflow: visible;
     max-height: none;
