@@ -10,33 +10,45 @@ const MainContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  min-height: 100vh @media (max-width: 768px) {
+    flex-wrap: nowrap;
+  }
 `;
 
-const StyledSection = styled.section`
+const StyledYellowSection = styled.section`
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
+  flex-direction: row;
   flex-basis: 100%;
-  min-height: 100vh;
+  // min-height: 100vh;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
   order: 1;
+  @media (max-width: 768px) {
+    flex-basis: 1;
+  }
 `;
-const StyledCloseUpContainer = styled.section`
+const StyledSubSection = styled.section`
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   flex-basis: 100%;
-  min-height: 100vh;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
   background: #000;
+  order: 1;
+
   @media (max-width: 768px) {
-    flex-basis: column;
-    height: 482px;
+    flex-basis: 1;
   }
-  order: 2;
+`;
+
+const StyledCloseUpContainer = styled.section`
+  display: flex;
 `;
 const StyledGalleryWrapper = styled.section`
   display: flex;
@@ -87,43 +99,29 @@ const RightPanel = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1 500px;
-  min-width: 0;
-  height: 100%;
-  max-height: 875px;
-  font-family: "Karla", sans-serif;
-  font-size: 40px;
-  color: #efece2;
-  background: #000;
-  @media (max-width: 768px) {
-    max-height: 60vh;
-  }
 `;
 
 const MainDescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
   font-size: 16px;
   line-height: 20px;
   text-align: left;
   padding: 0px 50px;
   color: #efece2;
+  max-height: 500px;
   overflow: auto;
-`;
-
-const MainPagePortraitText = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 80%;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
   @media (max-width: 768px) {
-    height: 115%;
+    overflow: visible;
+    max-height: none;
   }
 `;
+
 const MainInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
+  flex: 1;
   text-align: center;
   padding: 32px 0px;
   align-items: center;
@@ -146,6 +144,7 @@ const SubheaderText = styled.div`
   line-height: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  color: #efece2;
   margin: 4px;
   max-width: 70%;
 `;
@@ -176,73 +175,81 @@ const ArtistPage = ({ artist }) => {
   const scrollToTop = window.scrollTo(0, 0);
   return (
     <MainContainer>
-      <StyledSection>
+      <StyledYellowSection>
+
         <StyledImage src={require(`./images/${artistImages[artist.id]}.jpg`)} />
         <RightPanel>
-          <MainPagePortraitText>
-            <MainInfoContainer>
-              <SectionHeaderText>
-                {translate(`${artist.name}.fullName`)}
-              </SectionHeaderText>
-              <SubheaderText>
-                {translate(`${artist.name}.occupation-description`)}
-                {String.fromCharCode(183)} {translate("pronoun")}:
-                {translate(`${artist.name}.pronounName`)}
-              </SubheaderText>
-              <SubheaderText>
+
+          <MainInfoContainer>
+            <SectionHeaderText>
+              {translate(`${artist.name}.fullName`)}
+            </SectionHeaderText>
+            <SubheaderText>
+              {translate(`${artist.name}.occupation-description`)}
+              {String.fromCharCode(183)} {translate("pronoun")}:
+              {translate(`${artist.name}.pronounName`)}
+            </SubheaderText>
+            <SubheaderText>
+              <SiteWebText
+                href={translate(`${artist.name}.siteweb`)}
+                target="_blank"
+              >
+                {translate("websiteLabel")}
+              </SiteWebText>
+              &#8250;
+              {translate(`${artist.name}.siteweb2`).length > 1 && (
                 <SiteWebText
-                  href={translate(`${artist.name}.siteweb`)}
+                  href={translate(`${artist.name}.siteweb2`)}
                   target="_blank"
                 >
-                  {translate("websiteLabel")}
+                  {`${translate("websiteLabel")}`}
+                  <span>&#8250;</span>
                 </SiteWebText>
-                &#8250;
-                {translate(`${artist.name}.siteweb2`).length > 1 && (
-                  <SiteWebText
-                    href={translate(`${artist.name}.siteweb2`)}
-                    target="_blank"
-                  >
-                    {`${translate("websiteLabel")}`}
-                    <span>&#8250;</span>
-                  </SiteWebText>
-                )}
-              </SubheaderText>
-            </MainInfoContainer>
-            <MainDescriptionContainer>
-              <p>{translate(`${artist.name}.paragraph1-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph1-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph2-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph2-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph3-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph4-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph5-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph5-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph6-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph6-answer`)}</span>
-              <p>{translate(`${artist.name}.paragraph7-question`)}</p>
-              <span>{translate(`${artist.name}.paragraph7-answer`)}</span>
-            </MainDescriptionContainer>
-          </MainPagePortraitText>
+              )}
+            </SubheaderText>
+          </MainInfoContainer>
+          <MainDescriptionContainer>
+            <p>{translate(`${artist.name}.paragraph1-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph1-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph2-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph2-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph3-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph4-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph5-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph5-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph6-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph6-answer`)}</span>
+            <p>{translate(`${artist.name}.paragraph7-question`)}</p>
+            <span>{translate(`${artist.name}.paragraph7-answer`)}</span>
+          </MainDescriptionContainer>
+
         </RightPanel>
-      </StyledSection>
-      <StyledCloseUpContainer>
-        <StyledCloseUpImage
-          src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
-        />
-      </StyledCloseUpContainer>{" "}
-      <StyledCloseUpContainer>
-        <StyledCloseUpImage
-          src={require(`./images/${artistImages[artist.id]}-closeup2.jpg`)}
-        />
-      </StyledCloseUpContainer>
-      <StyledGalleryWrapper>
-        <Gallery showHeader scrollToTop={scrollToTop} />
-      </StyledGalleryWrapper>
-      <StyledCloseUpContainer>
+
+      </StyledYellowSection>
+      <StyledSubSection>
+        <StyledCloseUpContainer>
+          <StyledCloseUpImage
+            src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
+          />
+        </StyledCloseUpContainer>
+      </StyledSubSection>
+      <StyledSubSection>
+        <StyledCloseUpContainer>
+          <StyledCloseUpImage
+            src={require(`./images/${artistImages[artist.id]}-closeup2.jpg`)}
+          />
+        </StyledCloseUpContainer>
+      </StyledSubSection>
+      <StyledSubSection>
+        <StyledGalleryWrapper>
+          <Gallery showHeader scrollToTop={scrollToTop} />
+        </StyledGalleryWrapper>
+      </StyledSubSection>
+      <StyledSubSection>
         <History />
-      </StyledCloseUpContainer>
+      </StyledSubSection>
     </MainContainer>
   );
 };
