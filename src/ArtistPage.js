@@ -47,9 +47,6 @@ const StyledSubSection = styled.section`
   }
 `;
 
-const StyledCloseUpContainer = styled.section`
-  display: flex;
-`;
 const StyledGalleryWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -81,13 +78,18 @@ const StyledImage = styled.img`
   }
 `;
 
+const StyledCloseUpContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+`;
+
 const StyledCloseUpImage = styled.img`
   flex: 1 300px;
   min-width: 0;
-  width: 100%;
+  width: 50%;
   height: auto;
-  max-width: 704px;
-  max-height: 898px;
   @media (max-width: 768px) {
     order: 1;
   }
@@ -177,10 +179,8 @@ const ArtistPage = ({ artist }) => {
   return (
     <MainContainer>
       <StyledYellowSection>
-
         <StyledImage src={require(`./images/${artistImages[artist.id]}.jpg`)} />
         <RightPanel>
-
           <MainInfoContainer>
             <SectionHeaderText>
               {translate(`${artist.name}.fullName`)}
@@ -225,9 +225,7 @@ const ArtistPage = ({ artist }) => {
             <p>{translate(`${artist.name}.paragraph7-question`)}</p>
             <span>{translate(`${artist.name}.paragraph7-answer`)}</span>
           </MainDescriptionContainer>
-
         </RightPanel>
-
       </StyledYellowSection>
       <StyledSubSection>
         <StyledCloseUpContainer>
