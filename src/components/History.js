@@ -1,5 +1,3 @@
-import MontrealLogo from "./Icons/MontrealLogo";
-import QuebecLogo from "./Icons/QuebecLogo";
 import React, { useContext } from "react";
 
 import styled from "styled-components";
@@ -13,7 +11,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
-  background: #000;
+  background: #bfb373;
   order: 4;
   @media (max-width: 1200px) {
     margin-top: 100px;
@@ -60,20 +58,6 @@ const StyledParagraph = styled.div`
   }
 `;
 
-const StyledImage = styled.div`
-  margin-left: 50px;
-`;
-const StyledHistoryFooter = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  color: #efece2;
-  height: 80px;
-  width: 100%;
-  padding: 15px;
-`;
-
 const History = () => {
   const { translate } = useContext(I18nContext);
   return (
@@ -84,12 +68,6 @@ const History = () => {
         <StyledParagraph>{translate("history.paragraph2")}</StyledParagraph>{" "}
         <StyledParagraph>{translate("history.paragraph3")}</StyledParagraph>{" "}
         <StyledParagraph>{translate("history.paragraph4")}</StyledParagraph>
-        <StyledHistoryFooter>
-          <MontrealLogo />
-          <StyledImage>
-            <QuebecLogo />
-          </StyledImage>
-        </StyledHistoryFooter>
       </StyledLowerBlockContainer>
     </StyledSection>
   );

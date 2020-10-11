@@ -13,32 +13,37 @@ const MainAppContainer = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 40px;
-  background: black;
+  background: ${({ theme }) => theme.primaryLight};
   overflow-x: hidden;
   perspective: 2px;
 `;
 const App = () => {
   const [open, setOpen] = useState(false);
-  const [previewArtist, setPreviewArtist] = useState(null);
+  const [previewPhoto, setPreviewPhoto] = useState(null);
   const setMenu = (val) => {
     setOpen(val);
   };
-  const setPreview = (artist) => {
-    setPreviewArtist(artist);
+  const setPreview = (photo) => {
+    setPreviewPhoto(photo);
   };
-  const artists = [
-    { id: 1, name: "richard", url: "richard" },
-    { id: 2, name: "eli-tarek", url: "elitarek" },
-    { id: 3, name: "jodie-ann", url: "jodie-ann" },
-    { id: 4, name: "gabriella", url: "gabriella" },
-    { id: 5, name: "estelle&moohk", url: "estelle&adrienne" },
-    { id: 6, name: "rowan", url: "rowan" },
-    { id: 7, name: "yolande", url: "yolande" },
-    { id: 8, name: "shekh", url: "shekh" },
+  const photos = [
+    { id: 1, name: "vietnam1", label: "Snapshot Cuisine", url: "vietnam1" },
+    { id: 2, name: "vietnam2", label: "Unfair Prices", url: "vietnam2" },
+    { id: 3, name: "vietnam3", label: "Labour of Love", url: "vietnam3" },
+    {
+      id: 4,
+      name: "vietnam4",
+      label: "Tradition and Communication",
+      url: "vietnam4",
+    },
+    { id: 5, name: "vietnam5", label: "Industrialisation", url: "vietnam5" },
+    { id: 6, name: "vietnam6", label: "Lost Art", url: "vietnam6" },
+    { id: 7, name: "vietnam7", label: "Regional Differences", url: "vietnam7" },
+    { id: 8, name: "vietnam8", label: "About Me", url: "vietnam8" },
   ];
-  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedPhotos = photos.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
@@ -48,9 +53,9 @@ const App = () => {
           <Menu
             open={open}
             setMenu={setMenu}
-            artists={sortedArtists}
+            photos={sortedPhotos}
             setPreview={setPreview}
-            previewArtist={previewArtist}
+            previewPhoto={previewPhoto}
           />
 
           <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
@@ -66,13 +71,13 @@ const App = () => {
             path={"/history"}
             component={() => <History />}
           />
-          {artists.map((artist) => {
+          {photos.map((photo) => {
             return (
               <Route
-                key={artist.id}
+                key={photo.id}
                 exact
-                path={"/" + artist.url}
-                component={() => <ArtistPage key={artist.id} artist={artist} />}
+                path={"/" + photo.url}
+                component={() => <ArtistPage key={photo.id} photo={photo} />}
               />
             );
           })}

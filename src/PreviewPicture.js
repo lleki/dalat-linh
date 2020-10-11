@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React from "react";
-// import { artistImages } from "./Constants";
 
 const StyledImage = styled.div`
 position:absolute;
@@ -16,23 +15,22 @@ position:absolute;
   }
 
 `;
-const artistImages = {
-  1: "richard",
-  2: "eli-tarek",
-  3: "jodie-ann",
-  4: "gabriella",
-  5: "estelle",
-  6: "rowan",
-  7: "yolande",
-  8: "shekh",
-  9: "laurence",
+const vietnamImages = {
+  1: "vietnam1",
+  2: "vietnam2",
+  3: "vietnam3",
+  4: "vietnam4",
+  5: "vietnam5",
+  6: "vietnam6",
+  7: "vietnam7",
+  8: "vietnam8",
 };
 
-const PreviewPicture = ({ previewArtist }) => {
+const PreviewPicture = ({ previewPhoto }) => {
   return (
-    previewArtist && (
+    previewPhoto && (
       <StyledImage
-        image={require(`./images/${artistImages[previewArtist]}.jpg`)}
+        image={require(`./images/${vietnamImages[previewPhoto]}.jpg`)}
       />
     )
   );

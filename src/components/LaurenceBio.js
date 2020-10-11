@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import React, { useContext } from "react";
 import { I18nContext } from "../i18n";
-import assistant from "../images/assistant.jpg";
-import laurence from "../images/laurence.jpg";
+import assistant from "../images/vietnam1.jpg";
+import laurence from "../images/vietnam2.jpg";
 
 const MainContainer = styled.div`
   display: flex;

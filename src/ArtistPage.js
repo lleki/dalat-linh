@@ -10,6 +10,7 @@ const MainContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: stretch;
+  color: ${({ theme }) => theme.primaryDark};
   min-height: 100vh @media (max-width: 768px) {
     flex-wrap: nowrap;
   }
@@ -21,11 +22,10 @@ const StyledYellowSection = styled.section`
   flex-wrap: wrap;
   flex-direction: row;
   flex-basis: 100%;
-  // min-height: 100vh;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: ${({ theme }) => theme.primaryLight};
   order: 1;
   @media (max-width: 768px) {
     flex-basis: 1;
@@ -39,7 +39,7 @@ const StyledSubSection = styled.section`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: ${({ theme }) => theme.primaryLight};
   order: 1;
 
   @media (max-width: 768px) {
@@ -55,7 +55,7 @@ const StyledGalleryWrapper = styled.section`
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: ${({ theme }) => theme.primaryLight};
   @media (max-width: 768px) {
     flex-basis: column;
     height: 482px;
@@ -66,33 +66,9 @@ const StyledGalleryWrapper = styled.section`
 
 const StyledImage = styled.img`
   flex: none;
-  height: 100vh;
-  @media (max-width: 1280px) {
-    flex: 1 500px;
-    width: 50%;
-    height: auto;
-  }
-  @media (max-width: 1000px) {
-    flex: 1 500px;
-    height: auto;
-  }
-`;
-
-const StyledCloseUpContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 500px;
-`;
-
-const StyledCloseUpImage = styled.img`
-  flex: 1 300px;
-  min-width: 0;
+  flex: 1 500px;
   width: 50%;
   height: auto;
-  @media (max-width: 768px) {
-    order: 1;
-  }
 `;
 
 const RightPanel = styled.div`
@@ -111,7 +87,7 @@ const MainDescriptionContainer = styled.div`
   line-height: 20px;
   text-align: left;
   padding: 0px 50px;
-  color: #efece2;
+  color: ${({ theme }) => theme.primaryDark};
   max-height: 500px;
   overflow: auto;
   margin-bottom: 10px;
@@ -136,7 +112,7 @@ const SectionHeaderText = styled.div`
   font-size: 56px;
   line-height: 65px;
   text-align: center;
-  color: #efece2;
+  color: ${({ theme }) => theme.primaryDark};
   margin: 40px 12px;
   @media (max-width: 768px) {
     margin: 16px 12px;
@@ -162,85 +138,32 @@ const SiteWebText = styled.a`
   margin-left: 6px;
 `;
 
-const artistImages = {
-  1: "richard",
-  2: "eli-tarek",
-  3: "jodie-ann",
-  4: "gabriella",
-  5: "estelle",
-  6: "rowan",
-  7: "yolande",
-  8: "shekh",
+const vietnamImages = {
+  1: "vietnam1",
+  2: "vietnam2",
+  3: "vietnam3",
+  4: "vietnam4",
+  5: "vietnam5",
+  6: "vietnam6",
 };
-
-const ArtistPage = ({ artist }) => {
+const ArtistPage = ({ photo }) => {
   const { translate } = useContext(I18nContext);
   const scrollToTop = window.scrollTo(0, 0);
   return (
     <MainContainer>
       <StyledYellowSection>
-        <StyledImage src={require(`./images/${artistImages[artist.id]}.jpg`)} />
+        <StyledImage src={require(`./images/${vietnamImages[photo.id]}.jpg`)} />
         <RightPanel>
           <MainInfoContainer>
             <SectionHeaderText>
-              {translate(`${artist.name}.fullName`)}
+              {translate(`${photo.name}.articleTitle`)}
             </SectionHeaderText>
-            <SubheaderText>
-              {translate(`${artist.name}.occupation-description`)}
-              {String.fromCharCode(183)} {translate("pronoun")}:
-              {translate(`${artist.name}.pronounName`)}
-            </SubheaderText>
-            <SubheaderText>
-              <SiteWebText
-                href={translate(`${artist.name}.siteweb`)}
-                target="_blank"
-              >
-                {translate("websiteLabel")}
-              </SiteWebText>
-              &#8250;
-              {translate(`${artist.name}.siteweb2`).length > 1 && (
-                <SiteWebText
-                  href={translate(`${artist.name}.siteweb2`)}
-                  target="_blank"
-                >
-                  {`${translate("websiteLabel")}`}
-                  <span>&#8250;</span>
-                </SiteWebText>
-              )}
-            </SubheaderText>
           </MainInfoContainer>
           <MainDescriptionContainer>
-            <p>{translate(`${artist.name}.paragraph1-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph1-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph2-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph2-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph3-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph3-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph4-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph4-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph5-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph5-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph6-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph6-answer`)}</span>
-            <p>{translate(`${artist.name}.paragraph7-question`)}</p>
-            <span>{translate(`${artist.name}.paragraph7-answer`)}</span>
+            {translate(`${photo.name}.description`)}
           </MainDescriptionContainer>
         </RightPanel>
       </StyledYellowSection>
-      <StyledSubSection>
-        <StyledCloseUpContainer>
-          <StyledCloseUpImage
-            src={require(`./images/${artistImages[artist.id]}-closeup.jpg`)}
-          />
-        </StyledCloseUpContainer>
-      </StyledSubSection>
-      <StyledSubSection>
-        <StyledCloseUpContainer>
-          <StyledCloseUpImage
-            src={require(`./images/${artistImages[artist.id]}-closeup2.jpg`)}
-          />
-        </StyledCloseUpContainer>
-      </StyledSubSection>
       <StyledSubSection>
         <StyledGalleryWrapper>
           <Gallery showHeader scrollToTop={scrollToTop} />

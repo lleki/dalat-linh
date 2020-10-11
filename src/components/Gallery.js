@@ -2,64 +2,48 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import { Link } from "react-router-dom";
-// import { artistImages } from "../Constants";
+
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
-  height: 1000px;
+  flex: 1;
+  flex-direction: column;
+  // height: 1000px;
   width: 100%;
   align-items: center;
   justify-content: center;
-  background: #000;
+  background: ${({ theme }) => theme.primaryLight};
   padding-top: 40px;
-  @media (max-width: 1550px) {
-    min-height: 100%;
-    flex-shrink: 0;
-    height: 1120px;
-  }
-  @media (max-width: 768px) {
-    min-height: 100%;
-    flex-shrink: 0;
-    height: 1120px;
-  }
-  order: 3;
+  // @media (max-width: 1550px) {
+  //   min-height: 100%;
+  //   flex-shrink: 0;
+  //   height: 1120px;
+  // }
+  // @media (max-width: 768px) {
+  //   min-height: 100%;
+  //   flex-shrink: 0;
+  //   height: 1120px;
+  // }
+  // order: 3;
 `;
 
 const StyledGalleryImage = styled.img`
-  width: 269px;
-  height: 345px;
   object-fit: cover;
   vertical-align: bottom;
+  max-width:100%;
+  border-radius: 10px;
   &:hover {
     opacity: 0.5;
   }
-  @media (max-width: 1440px) {
-    width: 210px;
-    height: 286px;
-  }
 
-  @media (max-width: 1000px) {
-    width: 150px;
-    height: 226px;
-  }
-  @media (max-width: 768px) {
-    width: 295px;
-    height: 378px;
-  }
-  @media (max-width: 400px) {
-    width: 295px;
-    height: 378px;
-  }
 `;
 const StyledUl = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  max-width: 1500px;
-  @media (max-width: 1442px) {
-    max-width: 1000px;
-  }
+  list-style-type: none;
+  max-width: 1000px;
   @media (max-width: 1000px) {
     width: 80%;
   }
@@ -77,52 +61,32 @@ const StyledUl = styled.ul`
 `;
 
 const Styledli = styled.li`
-  height: 378px;
-  flex-grow: 1;
-  margin: 40px;
-  @media (max-width: 1440px) {
-    margin: 20px;
-    height: 276px;
+  width: 25%;
+  padding: 10px;
+  @media screen and (max-width: 1000px) {
+    width: 50%;
   }
-  @media (max-width: 1000px) {
-    width: 150px;
-    height: 226px;
-    margin: 20px;
-  }
-  @media (max-width: 768px) {
-    width: 295px;
-    height: 378px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
   }
   @media (max-width: 400px) {
-    width: 295px;
-    height: 378px;
+    margin-bottom: 0;
+    padding: 5px 10px;
   }
 `;
 
 const StyledWrapper = styled.div`
   position: relative;
-  width: 269px;
-  height: 345px;
   font-family: "Karla", sans-serif;
   font-size: 25px;
+  border-radius: 10px;
   div {
     &:hover {
       opacity: 1;
       background-color: rgba(0, 0, 0, 0.5);
     }
   }
-  @media (max-width: 1440px) {
-    width: 210px;
-    height: 286px;
-  }
-  @media (max-width: 1000px) {
-    width: 150px;
-    height: 226px;
-
-    @media (max-width: 768px) {
-      width: 295px;
-      height: 378px;
-    }
   }
 `;
 
@@ -145,17 +109,18 @@ const StyledOverlay = styled.div`
   width: 100%;
   opacity: 0;
   transition: 0.5s ease;
+  border-radius: 10px;
   border: 1px solid #fff;
 `;
 
-const StyledEssentielsText = styled.div`
+const StyledGalleryHeader = styled.div`
   font-size: 56px;
   line-height: 65px;
   text-align: center;
   letter-spacing: 4px;
   text-transform: uppercase;
   padding-top: 80px;
-  color: #efece2;
+  color: ${({ theme }) => theme.primaryDark};
   @media (max-width: 768px) {
     font-size: 26px;
     padding: 0px 46px 20px;
@@ -163,55 +128,48 @@ const StyledEssentielsText = styled.div`
   }
 `;
 
-const artists = [
-  { id: 1, name: "richard", url: "richard" },
-  { id: 2, name: "eli-tarek", url: "elitarek" },
-  { id: 3, name: "jodie-ann", url: "jodie-ann" },
-  { id: 4, name: "gabriella", url: "gabriella" },
-  { id: 5, name: "estelle&moohk", url: "estelle&adrienne" },
-  { id: 6, name: "rowan", url: "rowan" },
-  { id: 7, name: "yolande", url: "yolande" },
-  { id: 8, name: "shekh", url: "shekh" },
+const photo = [
+  { id: 1, name: "vietnam1", url: "vietnam1" },
+  { id: 2, name: "vietnam2", url: "vietnam2" },
+  { id: 3, name: "vietnam3", url: "vietnam3" },
+  { id: 4, name: "vietnam4", url: "vietnam4" },
+  { id: 5, name: "vietnam5", url: "vietnam5" },
+  { id: 6, name: "vietnam6", url: "vietnam6" },
+  { id: 7, name: "vietnam7", url: "vietnam7" },
+  { id: 8, name: "vietnam8", url: "vietnam8" },
 ];
-const artistImages = {
-  1: "richard",
-  2: "eli-tarek",
-  3: "jodie-ann",
-  4: "gabriella",
-  5: "estelle",
-  6: "rowan",
-  7: "yolande",
-  8: "shekh",
+const vietnamImages = {
+  1: "vietnam1",
+  2: "vietnam2",
+  3: "vietnam3",
+  4: "vietnam4",
+  5: "vietnam5",
+  6: "vietnam6",
+  7: "vietnam7",
+  8: "vietnam8",
 };
 
 const Gallery = ({ showHeader, scrollToTop }) => {
   const { translate } = useContext(I18nContext);
-  const sortedArtists = artists.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedPhotos = photo.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <StyledSection>
-      {showHeader && (
-        <StyledEssentielsText>
-          {translate("the-essentials")}
-        </StyledEssentielsText>
-      )}
       <StyledUl>
-        {sortedArtists.map((artist) => {
+        {sortedPhotos.map((photo) => {
           return (
             <Styledli>
               <Link
-                key={artist.id}
-                to={"/" + artist.url}
+                key={photo.id}
+                to={"/" + photo.url}
                 onClick={() => scrollToTop()}
               >
                 <StyledWrapper>
                   <StyledGalleryImage
-                    src={require(`../images/${
-                      artistImages[artist.id]
-                    }-thumbnail.jpg`)}
+                    src={require(`../images/${vietnamImages[photo.id]}.jpg`)}
                   />
                   <StyledOverlay>
                     <StyledCaption>
-                      {translate(`${artist.name}.fullName`).toUpperCase()}
+                      {translate(`${photo.name}.articleTitle`).toUpperCase()}
                     </StyledCaption>
                   </StyledOverlay>
                 </StyledWrapper>

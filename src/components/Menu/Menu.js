@@ -65,11 +65,11 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
+const Menu = ({ open, setMenu, photos, setPreview, previewPhoto }) => {
   const { translate } = useContext(I18nContext);
   return (
     <Fragment>
-      {open && <PreviewPicture previewArtist={previewArtist} />}
+      {open && <PreviewPicture previewPhoto={previewPhoto} />}
       <StyledMenu open={open}>
         <LinksWrapper>
           <div>
@@ -83,27 +83,15 @@ const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
             </Link>
           </div>
 
-          {artists.map((artist) => (
+          {photos.map((photo) => (
             <div
-              key={artist.id}
-              onMouseEnter={() => setPreview(artist.id)}
+              key={photo.id}
+              onMouseEnter={() => setPreview(photo.id)}
               onClick={() => setMenu(false)}
             >
-              {artist.name === "eli-tarek" ? (
-                <Link to={"/" + artist.url}>Eli Tarek</Link>
-              ) : (
-                <Link to={"/" + artist.url}>{artist.name}</Link>
-              )}
+              <Link to={"/" + photo.url}>{photo.label}</Link>
             </div>
           ))}
-          <div
-            onMouseEnter={() => setPreview(9)}
-            onClick={() => setMenu(false)}
-          >
-            <Link to={"/laurence"} onClick={() => setMenu(false)}>
-              {translate("theartist")}
-            </Link>
-          </div>
         </LinksWrapper>
       </StyledMenu>
     </Fragment>
@@ -112,6 +100,6 @@ const Menu = ({ open, setMenu, artists, setPreview, previewArtist }) => {
 Menu.propTypes = {
   open: bool.isRequired,
   setMenu: func.isRequired,
-  artists: array.isRequired,
+  photos: array.isRequired,
 };
 export default Menu;

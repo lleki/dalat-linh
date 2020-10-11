@@ -3,20 +3,46 @@ import styled from "styled-components";
 
 import Gallery from "./components/Gallery";
 import { I18nContext } from "./i18n";
-const StyledEssentielsText = styled.div`
-  position: absolute;
-  top: 0;
+
+const StyledHomePage = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+`;
+const StyledMainBody = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+`;
+const IntroductionParagraph = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 500px;
+  padding: 20px;
+  font-size: 22px;
+  font-family: "Open Sans", sans-serif;
+`;
+const StyledGalleryText = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   height: 172px;
   margin: auto;
   width: 100%;
   font-size: 56px;
-  line-height: 65px;
   text-align: center;
-  letter-spacing: 4px;
   text-transform: uppercase;
   padding-top: 52px;
-  color: #efece2;
-
+  color: ${({ theme }) => theme.primaryDark};
+  font-family: "Oswald", sans-serif;
   @media (max-width: 1070px) {
     font-size: 26px;
     padding: 0px 46px 20px;
@@ -28,29 +54,25 @@ const StyledEssentielsText = styled.div`
     top: 100px;
   }
 `;
-const GalleryContainer = styled.div`
-  position: absolute;
-  top: 0;
-  margin-top: 110px;
+const StyledImage = styled.img`
   width: 100%;
-  @media (max-width: 1100px) {
-    margin-top: 0px;
-  }
-  @media (max-width: 1000px) {
-    margin-top: 200px;
-  }
+  height: auto;
 `;
 
 const HomePage = () => {
   const { translate } = useContext(I18nContext);
   const scrollToTop = window.scrollTo(0, 0);
   return (
-    <div>
-      <StyledEssentielsText>{translate("the-essentials")}</StyledEssentielsText>
-      <GalleryContainer>
+    <StyledHomePage>
+      {/*<StyledImage src={require(`./images/cover-photo.jpg`)} />*/}
+      <StyledGalleryText>{translate("the-gallery")}</StyledGalleryText>
+      <StyledMainBody>
+        <IntroductionParagraph>
+          {translate("introduction")}
+        </IntroductionParagraph>
         <Gallery showHeader={false} scrollToTop={scrollToTop} />
-      </GalleryContainer>
-    </div>
+      </StyledMainBody>
+    </StyledHomePage>
   );
 };
 

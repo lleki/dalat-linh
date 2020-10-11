@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { bool, func } from "prop-types";
-import MassiveArtLogo from "../Icons/MassiveArtLogo";
 import LanguageSelect from "../../LanguageSelect";
-import laurenceLogo from "../../images/laurencelogowhite.png";
 
 const RightSide = styled.div`
   display: flex;
@@ -19,7 +17,7 @@ const BurgerContainer = styled.div`
   width: 100%;
   padding: 40px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   z-index: 99;
   @media (max-width: 768px) {
     padding: 20px;
@@ -34,8 +32,7 @@ export const StyledBurger = styled.div`
   align-items: center;
   width: 92px;
   height: 92px;
-  padding: 20px;
-  border: 1px solid black;
+  padding: 10px;
   background: ${({ theme }) => theme.primaryLight};
   cursor: pointer;
   z-index: 99;
@@ -98,26 +95,10 @@ const LogoContainer = styled.div`
     width: 50%;
   }
 `;
-const StyledMassiveArt = styled.div`
-  width: 40%;
-  height: auto;
-`;
-const StyledLaurenceLogoImage = styled.img`
-  width: 60%;
-  height: auto;
-  margin-left: 20px;
-`;
 
 const Burger = ({ open, setOpen }) => {
   return (
     <BurgerContainer>
-      <LogoContainer>
-        <StyledMassiveArt>
-          <MassiveArtLogo />
-        </StyledMassiveArt>
-        <StyledLaurenceLogoImage src={laurenceLogo} />
-      </LogoContainer>
-
       <RightSide>
         <LanguageSelect isOpen={open} />
         <StyledBurger open={open} onClick={() => setOpen(!open)}>
