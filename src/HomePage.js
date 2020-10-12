@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-
 import Gallery from "./components/Gallery";
 import { I18nContext } from "./i18n";
 
@@ -54,17 +53,12 @@ const StyledGalleryText = styled.div`
     top: 100px;
   }
 `;
-const StyledImage = styled.img`
-  width: 100%;
-  height: auto;
-`;
 
 const HomePage = () => {
   const { translate } = useContext(I18nContext);
   const scrollToTop = window.scrollTo(0, 0);
   return (
     <StyledHomePage>
-      {/*<StyledImage src={require(`./images/cover-photo.jpg`)} />*/}
       <StyledGalleryText>{translate("the-gallery")}</StyledGalleryText>
       <StyledMainBody>
         <IntroductionParagraph>

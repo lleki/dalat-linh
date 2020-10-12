@@ -82,19 +82,6 @@ export const StyledBurger = styled.div`
     }
   }
 `;
-const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 20%;
-  @media (max-width: 1000px) {
-    width: 30%;
-  }
-  @media (max-width: 500px) {
-    width: 50%;
-  }
-`;
 
 const Burger = ({ open, setOpen }) => {
   return (

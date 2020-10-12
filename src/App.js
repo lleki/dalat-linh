@@ -6,7 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import ArtistPage from "./ArtistPage";
+import ArtistPage from "./components/ArtistPage";
 
 const MainAppContainer = styled.div`
   display: flex;

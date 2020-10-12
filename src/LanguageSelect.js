@@ -1,8 +1,7 @@
 import React, { useContext, useState } from "react";
-
 import { I18nContext } from "./i18n";
-
 import styled from "styled-components";
+
 const StyledButton = styled.div`
   background: transparent;
   cursor: pointer;

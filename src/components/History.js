@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
+
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;

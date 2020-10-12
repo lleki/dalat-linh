@@ -2,29 +2,18 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import { Link } from "react-router-dom";
+import {vietnamImages, photos} from "../Constants";
 
 const StyledSection = styled.section`
   display: flex;
   flex-wrap: wrap;
   flex: 1;
   flex-direction: column;
-  // height: 1000px;
   width: 100%;
   align-items: center;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
   padding-top: 40px;
-  // @media (max-width: 1550px) {
-  //   min-height: 100%;
-  //   flex-shrink: 0;
-  //   height: 1120px;
-  // }
-  // @media (max-width: 768px) {
-  //   min-height: 100%;
-  //   flex-shrink: 0;
-  //   height: 1120px;
-  // }
-  // order: 3;
 `;
 
 const StyledGalleryImage = styled.img`
@@ -113,53 +102,16 @@ const StyledOverlay = styled.div`
   border: 1px solid #fff;
 `;
 
-const StyledGalleryHeader = styled.div`
-  font-size: 56px;
-  line-height: 65px;
-  text-align: center;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  padding-top: 80px;
-  color: ${({ theme }) => theme.primaryDark};
-  @media (max-width: 768px) {
-    font-size: 26px;
-    padding: 0px 46px 20px;
-    line-height: 42px;
-  }
-`;
-
-const photo = [
-  { id: 1, name: "vietnam1", url: "vietnam1" },
-  { id: 2, name: "vietnam2", url: "vietnam2" },
-  { id: 3, name: "vietnam3", url: "vietnam3" },
-  { id: 4, name: "vietnam4", url: "vietnam4" },
-  { id: 5, name: "vietnam5", url: "vietnam5" },
-  { id: 6, name: "vietnam6", url: "vietnam6" },
-  { id: 7, name: "vietnam7", url: "vietnam7" },
-  { id: 8, name: "vietnam8", url: "vietnam8" },
-];
-const vietnamImages = {
-  1: "vietnam1",
-  2: "vietnam2",
-  3: "vietnam3",
-  4: "vietnam4",
-  5: "vietnam5",
-  6: "vietnam6",
-  7: "vietnam7",
-  8: "vietnam8",
-};
-
-const Gallery = ({ showHeader, scrollToTop }) => {
+const Gallery = ({ scrollToTop }) => {
   const { translate } = useContext(I18nContext);
-  const sortedPhotos = photo.sort((a, b) => a.name.localeCompare(b.name));
+  const sortedPhotos = photos.sort((a, b) => a.name.localeCompare(b.name));
   return (
     <StyledSection>
       <StyledUl>
         {sortedPhotos.map((photo) => {
           return (
-            <Styledli>
+            <Styledli key={photo.id}>
               <Link
-                key={photo.id}
                 to={"/" + photo.url}
                 onClick={() => scrollToTop()}
               >

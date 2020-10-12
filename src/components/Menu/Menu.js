@@ -3,7 +3,7 @@ import { bool, func, array } from "prop-types";
 import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import { I18nContext } from "../../i18n";
-import PreviewPicture from "../../PreviewPicture";
+import PreviewPicture from "../PreviewPicture";
 
 const LinksWrapper = styled.div`
   display: flex;
