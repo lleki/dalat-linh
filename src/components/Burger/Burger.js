@@ -15,7 +15,7 @@ const BurgerContainer = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  padding: 40px;
+  padding: 20px;
   align-items: center;
   justify-content: flex-end;
   z-index: 99;

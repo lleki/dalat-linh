@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import { Link } from "react-router-dom";
-import {vietnamImages, photos} from "../Constants";
+import { vietnamImages, photos } from "../Constants";
 
 const StyledSection = styled.section`
   display: flex;
@@ -19,12 +19,11 @@ const StyledSection = styled.section`
 const StyledGalleryImage = styled.img`
   object-fit: cover;
   vertical-align: bottom;
-  max-width:100%;
+  max-width: 100%;
   border-radius: 10px;
   &:hover {
     opacity: 0.5;
   }
-
 `;
 const StyledUl = styled.ul`
   display: flex;
@@ -102,19 +101,17 @@ const StyledOverlay = styled.div`
   border: 1px solid #fff;
 `;
 
-const Gallery = ({ scrollToTop }) => {
+const Gallery = () => {
   const { translate } = useContext(I18nContext);
   const sortedPhotos = photos.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <StyledSection>
       <StyledUl>
         {sortedPhotos.map((photo) => {
           return (
             <Styledli key={photo.id}>
-              <Link
-                to={"/" + photo.url}
-                onClick={() => scrollToTop()}
-              >
+              <Link to={"/" + photo.url}>
                 <StyledWrapper>
                   <StyledGalleryImage
                     src={require(`../images/${vietnamImages[photo.id]}.jpg`)}

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { I18nContext } from "../i18n";
 import Gallery from "./Gallery";
 import History from "./History";
-import {vietnamImages} from "../Constants";
+import { vietnamImages } from "../Constants";
 
 const MainContainer = styled.div`
   display: flex;
@@ -17,7 +17,7 @@ const MainContainer = styled.div`
   }
 `;
 
-const StyledYellowSection = styled.section`
+const StyledSideBySideSection = styled.section`
   display: flex;
   flex: 1;
   flex-wrap: wrap;
@@ -38,31 +38,29 @@ const StyledSubSection = styled.section`
   flex-wrap: wrap;
   flex-basis: 100%;
   flex-shrink: 0;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
-  order: 1;
-
+  order: 2;
   @media (max-width: 768px) {
     flex-basis: 1;
   }
 `;
-
-const StyledGalleryWrapper = styled.section`
+const StyledHistorySection = styled.section`
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   flex-basis: 100%;
-  min-height: 100vh;
   flex-shrink: 0;
+  min-height: 100vh;
   align-items: center;
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
-  @media (max-width: 768px) {
-    flex-basis: column;
-    height: 482px;
-  }
   order: 2;
-  overflow: auto;
+  @media (max-width: 768px) {
+    flex-basis: 1;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -120,14 +118,15 @@ const SectionHeaderText = styled.div`
   }
 `;
 
-
-const ArtistPage = ({ photo }) => {
+const Article = ({ photo }) => {
   const { translate } = useContext(I18nContext);
-  const scrollToTop = window.scrollTo(0, 0);
+
   return (
     <MainContainer>
-      <StyledYellowSection>
-        <StyledImage src={require(`../images/${vietnamImages[photo.id]}.jpg`)} />
+      <StyledSideBySideSection>
+        <StyledImage
+          src={require(`../images/${vietnamImages[photo.id]}.jpg`)}
+        />
         <RightPanel>
           <MainInfoContainer>
             <SectionHeaderText>
@@ -138,17 +137,17 @@ const ArtistPage = ({ photo }) => {
             {translate(`${photo.name}.description`)}
           </MainDescriptionContainer>
         </RightPanel>
-      </StyledYellowSection>
+      </StyledSideBySideSection>
       <StyledSubSection>
-        <StyledGalleryWrapper>
-          <Gallery showHeader scrollToTop={scrollToTop} />
-        </StyledGalleryWrapper>
+
+          <Gallery/>
+
       </StyledSubSection>
-      <StyledSubSection>
-        <History />
-      </StyledSubSection>
+      <StyledHistorySection>
+          <History />
+      </StyledHistorySection>
     </MainContainer>
   );
 };
 
-export default ArtistPage;
+export default Article;

@@ -22,6 +22,26 @@
     "articleTitle": "Tradition and Communication",
     "description": "Communicating with my mom through food."
   },
+  "vietnam5": {
+    "id": 5,
+    "articleTitle": "Coming Soon",
+    "description": "Still brainstorming other topics to cover."
+  },
+  "vietnam6": {
+    "id": 6,
+    "articleTitle": "Coming Soon",
+    "description": "Still brainstorming other topics to cover."
+  },
+  "vietnam7": {
+    "id": 7,
+    "articleTitle": "Coming Soon",
+    "description": "Still brainstorming other topics to cover."
+  },
+  "vietnam8": {
+    "id": 8,
+    "articleTitle": "Coming Soon",
+    "description": "Still brainstorming other topics to cover."
+  },
   "history": {
     "heading": "The Project"
   }

@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Burger, Menu, History, LaurenceBio } from "./components";
+import { Burger, Menu, History } from "./components";
 import HomePage from "./HomePage";
 import { ThemeProvider } from "styled-components";
 import { Switch, Route } from "react-router-dom";
 import { GlobalStyles } from "./global";
 import { theme } from "./theme";
-import ArtistPage from "./components/ArtistPage";
+import Article from "./components/Article";
+import ScrollToTop from "./ScrollToTop";
 
 const MainAppContainer = styled.div`
   display: flex;
@@ -22,6 +23,7 @@ const MainAppContainer = styled.div`
 const App = () => {
   const [open, setOpen] = useState(false);
   const [previewPhoto, setPreviewPhoto] = useState(null);
+
   const setMenu = (val) => {
     setOpen(val);
   };
@@ -47,42 +49,43 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Switch>
-        <MainAppContainer>
-          <Burger open={open} setOpen={setOpen} />
-          <Menu
-            open={open}
-            setMenu={setMenu}
-            photos={sortedPhotos}
-            setPreview={setPreview}
-            previewPhoto={previewPhoto}
-          />
+      <ScrollToTop>
+        <Switch>
+          <MainAppContainer>
+            <Burger open={open} setOpen={setOpen} />
+            <Menu
+              open={open}
+              setMenu={setMenu}
+              photos={sortedPhotos}
+              setPreview={setPreview}
+              previewPhoto={previewPhoto}
+            />
 
-          <Route key={"home"} exact path={"/"} component={() => <HomePage />} />
-          <Route
-            key={"laurence"}
-            exact
-            path={"/laurence"}
-            component={() => <LaurenceBio />}
-          />
-          <Route
-            key={"history"}
-            exact
-            path={"/history"}
-            component={() => <History />}
-          />
-          {photos.map((photo) => {
-            return (
-              <Route
-                key={photo.id}
-                exact
-                path={"/" + photo.url}
-                component={() => <ArtistPage key={photo.id} photo={photo} />}
-              />
-            );
-          })}
-        </MainAppContainer>
-      </Switch>
+            <Route
+              key={"home"}
+              exact
+              path={"/"}
+              component={() => <HomePage />}
+            />
+            <Route
+              key={"history"}
+              exact
+              path={"/history"}
+              component={() => <History />}
+            />
+            {photos.map((photo) => {
+              return (
+                <Route
+                  key={photo.id}
+                  exact
+                  path={"/" + photo.url}
+                  component={() => <Article key={photo.id} photo={photo} />}
+                />
+              );
+            })}
+          </MainAppContainer>
+        </Switch>
+      </ScrollToTop>
     </ThemeProvider>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import {vietnamImages} from "../Constants";
+import { vietnamImages } from "../Constants";
 
 const StyledImage = styled.div`
 position:absolute;
@@ -18,7 +18,7 @@ position:absolute;
 `;
 
 const PreviewPicture = ({ previewPhoto }) => {
-  console.log('previewPhoto', previewPhoto)
+  console.log("previewPhoto", previewPhoto);
   return (
     previewPhoto && (
       <StyledImage

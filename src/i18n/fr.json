@@ -1,7 +1,7 @@
 {
   "home": "Home",
   "the-gallery": "Les Limes et Linh",
-  "introduction": "Despite the chaos of 2020, I am one of the lucky few that benefited from this time; an opportunity to explore my heritage through food. With so much time to spend at home, I’ve found myself in a fervour of inspiration to rediscover my childhood as well as using it as a means to travel and escape my reality. The latter being a way to recreate dishes I once savoured when I was living in Vietnam as a toddler. The former being a way to pretend that I am not stuck in lockdown but rather exploring the intricate hardworking ways of the Vietnamese.  It also added a new dynamic to my relationship with my mother in a way that brings us even closer.\n\n\nIn these posts, I will explore several topics that have either come up while talking to my mom over the phone or with my boyfriend, whose background in food styling and industry offers different perspectives or added confirmations of things I’ve always felt were true.\n\nIn hoping this brings a little something to anyone reading this during these difficult times. Cheers.",
+  "introduction": "Malgré le chaos de 2020, je suis l'un des rares chanceux qui en ont profité; une occasion d'explorer mon patrimoine à travers la nourriture. Avec autant de temps à passer à la maison, je me suis retrouvé dans une ferveur d'inspiration pour redécouvrir mon enfance et l'utiliser comme un moyen de voyager et d'échapper à ma réalité. Ce dernier étant un moyen de recréer des plats que j'ai savourés une fois lorsque je vivais au Vietnam lorsque j'étais enfant. Le premier étant un moyen de prétendre que je ne suis pas coincé dans le verrouillage, mais plutôt d'explorer les méthodes de travail acharnées complexes des Vietnamiens. Cela a également ajouté une nouvelle dynamique à ma relation avec ma mère d'une manière qui nous rapproche encore plus. Dans ces articles, j'explorerai plusieurs sujets qui ont été évoqués en parlant à ma mère au téléphone ou avec mon petit ami, dont les antécédents dans le domaine de la coiffure et de l'industrie offrent des perspectives différentes ou ont ajouté des confirmations de choses que j'ai toujours senties vraies. En espérant que cela apporte un petit quelque chose à quiconque lira ceci pendant ces temps difficiles. À votre santé.",
   "vietnam1": {
     "id": 1,
     "articleTitle": "Snapshot Cuisine",
@@ -19,6 +19,26 @@
   },
   "vietnam4": {
     "id": 4,
+    "articleTitle": "Tradition and Communication",
+    "description": "Communicating with my mom through food."
+  },
+  "vietnam5": {
+    "id": 5,
+    "articleTitle": "Tradition and Communication",
+    "description": "Communicating with my mom through food."
+  },
+  "vietnam6": {
+    "id": 6,
+    "articleTitle": "Tradition and Communication",
+    "description": "Communicating with my mom through food."
+  },
+  "vietnam7": {
+    "id": 7,
+    "articleTitle": "Tradition and Communication",
+    "description": "Communicating with my mom through food."
+  },
+  "vietnam8": {
+    "id": 8,
     "articleTitle": "Tradition and Communication",
     "description": "Communicating with my mom through food."
   },

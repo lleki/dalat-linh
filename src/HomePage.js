@@ -12,28 +12,55 @@ const StyledHomePage = styled.div`
 const StyledMainBody = styled.div`
   display: flex;
   flex: 1;
+  flex-shrink: 0;
+  min-height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   padding: 20px;
 `;
-const IntroductionParagraph = styled.div`
+const StyledSubSection = styled.section`
   display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  min-height: 100%;
   align-items: center;
   justify-content: center;
+  background: ${({ theme }) => theme.primaryLight};
+  order: 2;
+  @media (max-width: 768px) {
+    flex-basis: 1;
+  }
+`;
+const IntroductionParagraph = styled.div`
+ display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  flex-shrink: 0;
+ align-items: center;
+  justify-content: center;
   width: 80%;
-  height: 500px;
+  margin:auto;
   padding: 20px;
   font-size: 22px;
   font-family: "Open Sans", sans-serif;
+  text-align: justify;
+    @media (max-width: 768px) {
+    width: 90%;
+    font-size: 20px;
+  }
 `;
-const StyledGalleryText = styled.div`
+const StyledHeaderText = styled.section`
   display: flex;
   flex: 1;
-  align-items: center;
+  flex-shrink: 0;
+  min-height: 172px;
+   align-items: center;
   justify-content: center;
-  height: 172px;
   margin: auto;
   width: 100%;
   font-size: 56px;
@@ -44,28 +71,24 @@ const StyledGalleryText = styled.div`
   font-family: "Oswald", sans-serif;
   @media (max-width: 1070px) {
     font-size: 26px;
-    padding: 0px 46px 20px;
-    top: 100px;
-  }
-  @media (max-width: 768px) {
-    font-size: 26px;
-    padding: 0px 46px 20px;
-    top: 100px;
+    padding: 20px;
   }
 `;
 
 const HomePage = () => {
   const { translate } = useContext(I18nContext);
-  const scrollToTop = window.scrollTo(0, 0);
+
   return (
     <StyledHomePage>
-      <StyledGalleryText>{translate("the-gallery")}</StyledGalleryText>
-      <StyledMainBody>
-        <IntroductionParagraph>
-          {translate("introduction")}
-        </IntroductionParagraph>
-        <Gallery showHeader={false} scrollToTop={scrollToTop} />
-      </StyledMainBody>
+      <StyledHeaderText>{translate("the-gallery")}</StyledHeaderText>
+      <IntroductionParagraph>
+        {translate("introduction")}
+
+      </IntroductionParagraph>
+
+      <StyledSubSection>
+        <Gallery showHeader={false} />
+      </StyledSubSection>
     </StyledHomePage>
   );
 };
