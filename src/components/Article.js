@@ -82,16 +82,15 @@ const MainDescriptionContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
   line-height: 20px;
   text-align: left;
   padding: 0px 50px;
   color: ${({ theme }) => theme.primaryDark};
   max-height: 500px;
-  overflow: auto;
   margin-bottom: 10px;
   @media (max-width: 768px) {
-    overflow: visible;
     max-height: none;
   }
 `;
