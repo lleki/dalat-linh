@@ -18,11 +18,12 @@ position:absolute;
 `;
 
 const PreviewPicture = ({ previewPhoto }) => {
-  console.log("previewPhoto", previewPhoto);
+    const iconPath = process.env.PUBLIC_URL + '/images';
   return (
     previewPhoto && (
       <StyledImage
-        image={require(`../images/${vietnamImages[previewPhoto]}.jpg`)}
+
+          image={`${iconPath}/${vietnamImages[previewPhoto]}.jpg`}
       />
     )
   );

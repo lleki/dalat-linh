@@ -9,17 +9,7 @@ const StyledHomePage = styled.div`
   height: 100vh;
   width: 100%;
 `;
-const StyledMainBody = styled.div`
-  display: flex;
-  flex: 1;
-  flex-shrink: 0;
-  min-height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-`;
+
 const StyledSubSection = styled.section`
   display: flex;
   flex: 1;

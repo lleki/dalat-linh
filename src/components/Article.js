@@ -119,12 +119,12 @@ const SectionHeaderText = styled.div`
 
 const Article = ({ photo }) => {
   const { translate } = useContext(I18nContext);
-
+    const iconPath = process.env.PUBLIC_URL + '/images';
   return (
     <MainContainer>
       <StyledSideBySideSection>
         <StyledImage
-          src={require(`../images/${vietnamImages[photo.id]}.jpg`)}
+          src={`${iconPath}/${vietnamImages[photo.id]}.jpg`}
         />
         <RightPanel>
           <MainInfoContainer>
