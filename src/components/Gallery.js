@@ -104,7 +104,8 @@ const StyledOverlay = styled.div`
 const Gallery = () => {
   const { translate } = useContext(I18nContext);
   const sortedPhotos = photos.sort((a, b) => a.name.localeCompare(b.name));
-
+  const iconPath = process.env.PUBLIC_URL + '/images';
+  console.log('vietnamImages', vietnamImages)
   return (
     <StyledSection>
       <StyledUl>
@@ -114,7 +115,7 @@ const Gallery = () => {
               <Link to={"/" + photo.url}>
                 <StyledWrapper>
                   <StyledGalleryImage
-                    src={require(`../images/${vietnamImages[photo.id]}.jpg`)}
+                    src={`${iconPath/vietnamImages[photo.id]}.jpg`}
                   />
                   <StyledOverlay>
                     <StyledCaption>
